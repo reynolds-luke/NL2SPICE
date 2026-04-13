@@ -1,0 +1,154 @@
+[
+  {
+    "prompt": "Provide a high-pass filter design that achieves a high degree of low-frequency rejection using only passives. The passband begins at 500 Hz with a maximum of 3.0 dB insertion loss. At 200 Hz, a minimum of 23.9 dB attenuation is required. No active components; use the fewest resistors and capacitors that satisfy all constraints.\n\nProvide the design as a SPICE netlist. The following node names are mandatory for automated simulation:\n  - Input node   : VIN\n  - Output node  : VOUT\n  - Ground / 0 V : GND\nName all resistors with the prefix R (e.g. R1, R2), all capacitors with the prefix C (e.g. C1, C2), and any op-amp with the designator U1. Include a voltage source V1 connected between VIN and GND. End the netlist with a .END statement. Do not include a simulation command (.AC, .TRAN, etc.) in the netlist; the simulation will be configured externally.",
+    "task_type": "high_pass_filter",
+    "topology": "multi",
+    "params": {
+      "topology": "multi",
+      "fc_hz": 500,
+      "fs_hz": 200,
+      "fs_ratio": 2,
+      "pb_loss_db": 3.0,
+      "rolloff_dbpdec": 60.0,
+      "atten_db": 23.9,
+      "n_stages": 3,
+      "high_z_source": false,
+      "low_z_load": false,
+      "load_r_ohm": null
+    },
+    "template_i": 8
+  },
+  {
+    "prompt": "Design a high-pass filter for a standard-impedance signal path. Pass signals above 8 kHz with under 3.0 dB loss. Provide at least 6.0 dB of attenuation at 4 kHz. Use only passive components and optimise for minimum BOM cost.\n\nProvide the design as a SPICE netlist. The following node names are mandatory for automated simulation:\n  - Input node   : VIN\n  - Output node  : VOUT\n  - Ground / 0 V : GND\nName all resistors with the prefix R (e.g. R1, R2), all capacitors with the prefix C (e.g. C1, C2), and any op-amp with the designator U1. Include a voltage source V1 connected between VIN and GND. End the netlist with a .END statement. Do not include a simulation command (.AC, .TRAN, etc.) in the netlist; the simulation will be configured externally.",
+    "task_type": "high_pass_filter",
+    "topology": "single",
+    "params": {
+      "topology": "single",
+      "fc_hz": 8000,
+      "fs_hz": 4000,
+      "fs_ratio": 2,
+      "pb_loss_db": 3.0,
+      "rolloff_dbpdec": 20.0,
+      "atten_db": 6.0,
+      "n_stages": 1,
+      "high_z_source": false,
+      "low_z_load": false,
+      "load_r_ohm": null
+    },
+    "template_i": 4
+  },
+  {
+    "prompt": "Design a high-pass filter for a high-impedance signal source with demanding stopband requirements. Frequencies at 5 kHz and above must be passed with less than 1.0 dB loss. At 500 Hz, the filter must deliver at least 40.0 dB of attenuation. Restrict components to resistors, capacitors, and at most one op-amp; minimise part count.\n\nProvide the design as a SPICE netlist. The following node names are mandatory for automated simulation:\n  - Input node   : VIN\n  - Output node  : VOUT\n  - Ground / 0 V : GND\nName all resistors with the prefix R (e.g. R1, R2), all capacitors with the prefix C (e.g. C1, C2), and any op-amp with the designator U1. Include a voltage source V1 connected between VIN and GND. End the netlist with a .END statement. Do not include a simulation command (.AC, .TRAN, etc.) in the netlist; the simulation will be configured externally.",
+    "task_type": "high_pass_filter",
+    "topology": "bufmulti",
+    "params": {
+      "topology": "bufmulti",
+      "fc_hz": 5000,
+      "fs_hz": 500,
+      "fs_ratio": 10,
+      "pb_loss_db": 1.0,
+      "rolloff_dbpdec": 40.0,
+      "atten_db": 40.0,
+      "n_stages": 2,
+      "high_z_source": true,
+      "low_z_load": false,
+      "load_r_ohm": null
+    },
+    "template_i": 3
+  },
+  {
+    "prompt": "Design a high-pass filter for a sensor interface where the source impedance is high and the load is 1000 ohm. The passband must begin at 2 kHz with less than 0.5 dB loss. At 1 kHz, at least 6.0 dB of suppression is needed. Allow resistors, capacitors, and at most one op-amp; keep the design simple.\n\nProvide the design as a SPICE netlist. The following node names are mandatory for automated simulation:\n  - Input node   : VIN\n  - Output node  : VOUT\n  - Ground / 0 V : GND\nName all resistors with the prefix R (e.g. R1, R2), all capacitors with the prefix C (e.g. C1, C2), and any op-amp with the designator U1. Include a voltage source V1 connected between VIN and GND. End the netlist with a .END statement. Do not include a simulation command (.AC, .TRAN, etc.) in the netlist; the simulation will be configured externally.",
+    "task_type": "high_pass_filter",
+    "topology": "buf",
+    "params": {
+      "topology": "buf",
+      "fc_hz": 2000,
+      "fs_hz": 1000,
+      "fs_ratio": 2,
+      "pb_loss_db": 0.5,
+      "rolloff_dbpdec": 20.0,
+      "atten_db": 6.0,
+      "n_stages": 1,
+      "high_z_source": true,
+      "low_z_load": true,
+      "load_r_ohm": 1000
+    },
+    "template_i": 3
+  },
+  {
+    "prompt": "Create a high-pass filter for a high-impedance transducer requiring strong out-of-band rejection. Signals at 4 kHz must pass with less than 0.5 dB insertion loss. Signals at 800 Hz must be suppressed by at least 69.9 dB. Permitted components: resistors, capacitors, and one op-amp. Minimise component count.\n\nProvide the design as a SPICE netlist. The following node names are mandatory for automated simulation:\n  - Input node   : VIN\n  - Output node  : VOUT\n  - Ground / 0 V : GND\nName all resistors with the prefix R (e.g. R1, R2), all capacitors with the prefix C (e.g. C1, C2), and any op-amp with the designator U1. Include a voltage source V1 connected between VIN and GND. End the netlist with a .END statement. Do not include a simulation command (.AC, .TRAN, etc.) in the netlist; the simulation will be configured externally.",
+    "task_type": "high_pass_filter",
+    "topology": "bufmulti",
+    "params": {
+      "topology": "bufmulti",
+      "fc_hz": 4000,
+      "fs_hz": 800,
+      "fs_ratio": 5,
+      "pb_loss_db": 0.5,
+      "rolloff_dbpdec": 100.0,
+      "atten_db": 69.9,
+      "n_stages": 5,
+      "high_z_source": true,
+      "low_z_load": false,
+      "load_r_ohm": null
+    },
+    "template_i": 8
+  },
+  {
+    "prompt": "Design a high-pass filter with sharp low-frequency rejection for an EMC application. Frequencies at 1 kHz and above must be passed with <= 1.0 dB attenuation. Low-frequency interference at 300 Hz must be reduced by a minimum of 52.3 dB. Use only resistors and capacitors, and favour the simplest topology that meets these figures.\n\nProvide the design as a SPICE netlist. The following node names are mandatory for automated simulation:\n  - Input node   : VIN\n  - Output node  : VOUT\n  - Ground / 0 V : GND\nName all resistors with the prefix R (e.g. R1, R2), all capacitors with the prefix C (e.g. C1, C2), and any op-amp with the designator U1. Include a voltage source V1 connected between VIN and GND. End the netlist with a .END statement. Do not include a simulation command (.AC, .TRAN, etc.) in the netlist; the simulation will be configured externally.",
+    "task_type": "high_pass_filter",
+    "topology": "multi",
+    "params": {
+      "topology": "multi",
+      "fc_hz": 1000,
+      "fs_hz": 300,
+      "fs_ratio": 3,
+      "pb_loss_db": 1.0,
+      "rolloff_dbpdec": 100.0,
+      "atten_db": 52.3,
+      "n_stages": 5,
+      "high_z_source": false,
+      "low_z_load": false,
+      "load_r_ohm": null
+    },
+    "template_i": 5
+  },
+  {
+    "prompt": "Provide a high-pass filter design for a high-impedance signal source driving a 4700 ohm load. The insertion loss must be below 1.0 dB from 1 kHz upward. A minimum of 14.0 dB attenuation is required at 200 Hz. Only one op-amp is permitted alongside resistors and capacitors; keep the BOM cost low.\n\nProvide the design as a SPICE netlist. The following node names are mandatory for automated simulation:\n  - Input node   : VIN\n  - Output node  : VOUT\n  - Ground / 0 V : GND\nName all resistors with the prefix R (e.g. R1, R2), all capacitors with the prefix C (e.g. C1, C2), and any op-amp with the designator U1. Include a voltage source V1 connected between VIN and GND. End the netlist with a .END statement. Do not include a simulation command (.AC, .TRAN, etc.) in the netlist; the simulation will be configured externally.",
+    "task_type": "high_pass_filter",
+    "topology": "buf",
+    "params": {
+      "topology": "buf",
+      "fc_hz": 1000,
+      "fs_hz": 200,
+      "fs_ratio": 4,
+      "pb_loss_db": 1.0,
+      "rolloff_dbpdec": 20.0,
+      "atten_db": 14.0,
+      "n_stages": 1,
+      "high_z_source": true,
+      "low_z_load": true,
+      "load_r_ohm": 4700
+    },
+    "template_i": 4
+  },
+  {
+    "prompt": "Specify a high-pass RC network to block low-frequency noise from a measurement line. Frequencies at 2 kHz and above must be passed with <= 0.5 dB loss. The attenuation at 500 Hz must be >= 12.0 dB. The design should use the fewest passive components that satisfy these requirements.\n\nProvide the design as a SPICE netlist. The following node names are mandatory for automated simulation:\n  - Input node   : VIN\n  - Output node  : VOUT\n  - Ground / 0 V : GND\nName all resistors with the prefix R (e.g. R1, R2), all capacitors with the prefix C (e.g. C1, C2), and any op-amp with the designator U1. Include a voltage source V1 connected between VIN and GND. End the netlist with a .END statement. Do not include a simulation command (.AC, .TRAN, etc.) in the netlist; the simulation will be configured externally.",
+    "task_type": "high_pass_filter",
+    "topology": "single",
+    "params": {
+      "topology": "single",
+      "fc_hz": 2000,
+      "fs_hz": 500,
+      "fs_ratio": 4,
+      "pb_loss_db": 0.5,
+      "rolloff_dbpdec": 20.0,
+      "atten_db": 12.0,
+      "n_stages": 1,
+      "high_z_source": false,
+      "low_z_load": false,
+      "load_r_ohm": null
+    },
+    "template_i": 2
+  }
+]
