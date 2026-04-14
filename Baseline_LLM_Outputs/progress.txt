@@ -1,0 +1,20 @@
+========================================================
+  PIPELINE PROGRESS  —  2026-04-14 07:55:10
+========================================================
+  Elapsed:         5h 48m 50s
+  Datasets:        4/4  (lpf, hpf, bpf, notch)
+  Current dataset: notch (done)  [2000/2000 entries]
+
+  Total processed: 8000
+  Parse success:   7951/8000  (99.4%)
+  Sim converged:   7385/8000  (92.3%)
+  Response match:  273/7385  (3.7%)
+
+  ETA:             0s (current dataset)
+========================================================
+  Per task type:
+    band_pass_filter       done=2000  parse= 99.8%  sim= 87.2%
+    high_pass_filter       done=2000  parse= 99.5%  sim= 99.1%
+    low_pass_filter        done=2000  parse= 99.0%  sim= 98.2%
+    notch_filter           done=2000  parse= 99.4%  sim= 84.8%
+========================================================

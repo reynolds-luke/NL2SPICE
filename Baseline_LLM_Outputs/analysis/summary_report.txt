@@ -1,0 +1,42 @@
+=================================================================
+  LLM NETLIST EVALUATION — FULL RUN SUMMARY
+  Timestamp: 20260414_020619   Generated: 2026-04-14 12:25
+=================================================================
+
+  Total entries:          8000
+  Parse success:          7951/8000  (99.4%)
+  Simulation converged:   7385/8000  (92.3%)
+  Spec match (of conv'd): 273/7385  (3.7%)
+
+  Filter        Total   Parse%    Conv%   Match%  Avg fc_err%
+  ------------------------------------------------------------
+  Low-Pass       2000    99.0%    98.2%     1.0%       225.6%
+  High-Pass      2000    99.5%    99.1%     0.0%       329.2%
+  Band-Pass      2000    99.8%    87.2%     0.0%       926.6%
+  Notch          2000    99.4%    84.8%    15.0%          n/a
+
+  KEY FINDINGS
+  ----------------------------------------
+
+  LOW-PASS FILTER:
+    Passband ripple (median):   15.17 dB
+    Attenuation spec met:        53.0%
+    Avg cutoff freq error:       225.6%
+
+  HIGH-PASS FILTER:
+    Passband ripple (median):   39.83 dB
+    Attenuation spec met:        22.3%
+    Avg cutoff freq error:       329.2%
+
+  BAND-PASS FILTER:
+    Passband ripple (median):   0.37 dB
+    Attenuation spec met:        17.9%
+    Avg cutoff freq error:       926.6%
+
+  NOTCH FILTER:
+    Passband ripple: n/a
+    Attenuation spec met:        44.1%
+    Cutoff freq error: n/a
+    Median notch depth achieved: 2.7 dB
+
+=================================================================

@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-04-14T07:55:10.340201",
+  "total_entries": 8000,
+  "parse_success_rate_pct": 99.4,
+  "simulation_convergence_pct": 92.3,
+  "filter_response_match_pct": 3.7,
+  "avg_generation_time_s": 2.593,
+  "token_efficiency_per_netlist": 96.9,
+  "per_task_type": {
+    "band_pass_filter": {
+      "total": 2000,
+      "parse_success_rate_pct": 99.8,
+      "simulation_convergence_pct": 87.2,
+      "filter_response_match_pct": 0.0,
+      "avg_cutoff_freq_error_pct": 2397.69
+    },
+    "high_pass_filter": {
+      "total": 2000,
+      "parse_success_rate_pct": 99.5,
+      "simulation_convergence_pct": 99.1,
+      "filter_response_match_pct": 0.0,
+      "avg_cutoff_freq_error_pct": 329.2
+    },
+    "low_pass_filter": {
+      "total": 2000,
+      "parse_success_rate_pct": 99.0,
+      "simulation_convergence_pct": 98.2,
+      "filter_response_match_pct": 1.0,
+      "avg_cutoff_freq_error_pct": 225.56
+    },
+    "notch_filter": {
+      "total": 2000,
+      "parse_success_rate_pct": 99.4,
+      "simulation_convergence_pct": 84.8,
+      "filter_response_match_pct": 15.0,
+      "avg_cutoff_freq_error_pct": null
+    }
+  }
+}
