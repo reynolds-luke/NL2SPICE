@@ -11,7 +11,7 @@ from typing import Dict
 from utils.find_cutoffs import find_notch_cutoff_frequencies
 from utils.measure_atten import simulate_attenuation
 
-from datagen_new.prompt_templates.notch_templates import TEMPLATES
+from prompt_templates.notch_templates import TEMPLATES
 
 
 # ---------------------------------------------------------------------------
