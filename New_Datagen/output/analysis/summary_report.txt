@@ -1,0 +1,31 @@
+=================================================================
+  LLM NETLIST EVALUATION v2 — FULL RUN SUMMARY
+  Timestamp: 20260419_115757   Generated: 2026-04-21 04:54
+=================================================================
+
+  Total entries:          4000
+  Parse success:          3981/4000  (99.5%)
+  Simulation converged:   3658/4000  (91.5%)
+  Functional converged:   1881/4000  (47.0%)
+  Spec match (of func'd): 125/1881  (6.6%)
+
+  Filter        Total   Parse%    Conv%    Func%   Match%
+  ----------------------------------------------------------
+  Low-Pass       1000    99.9%    96.0%    53.8%     0.9%
+  High-Pass      1000    99.9%    95.2%     3.2%     0.0%
+  Band-Pass      1000    99.0%    91.2%    57.5%     0.0%
+  Notch          1000    99.3%    83.4%    73.6%    16.3%
+
+  COMPONENT VALUE ACCURACY (LPF/HPF single-stage)
+  ----------------------------------------------------------
+  Low-Pass     median log10(RC_llm/RC_ideal) = +0.61 decades  (n=271)
+  High-Pass    median log10(RC_llm/RC_ideal) = +0.24 decades  (n=266)
+
+  TOPOLOGY MATCH VS GROUND TRUTH
+  ----------------------------------------------------------
+  Low-Pass     74.4%  (n=999)
+  High-Pass    66.1%  (n=999)
+  Band-Pass    80.2%  (n=990)
+  Notch        84.2%  (n=993)
+
+=================================================================

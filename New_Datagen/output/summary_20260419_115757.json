@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-04-19T14:57:14.122582",
+  "total_entries": 4000,
+  "parse_success_rate_pct": 99.5,
+  "simulation_convergence_pct": 91.5,
+  "functional_convergence_pct": 47.0,
+  "filter_response_match_pct": 6.6,
+  "filter_response_match_pct_of_all": 3.1,
+  "avg_generation_time_s": 2.663,
+  "token_efficiency_per_netlist": 109.0,
+  "per_task_type": {
+    "band_pass_filter": {
+      "total": 1000,
+      "parse_success_rate_pct": 99.0,
+      "simulation_convergence_pct": 91.2,
+      "functional_convergence_pct": 57.5,
+      "filter_response_match_pct": 0.0,
+      "avg_cutoff_freq_error_pct": 1191580.99
+    },
+    "high_pass_filter": {
+      "total": 1000,
+      "parse_success_rate_pct": 99.9,
+      "simulation_convergence_pct": 95.2,
+      "functional_convergence_pct": 3.2,
+      "filter_response_match_pct": 0.0,
+      "avg_cutoff_freq_error_pct": 979.43
+    },
+    "low_pass_filter": {
+      "total": 1000,
+      "parse_success_rate_pct": 99.9,
+      "simulation_convergence_pct": 96.0,
+      "functional_convergence_pct": 53.8,
+      "filter_response_match_pct": 0.9,
+      "avg_cutoff_freq_error_pct": 7615.43
+    },
+    "notch_filter": {
+      "total": 1000,
+      "parse_success_rate_pct": 99.3,
+      "simulation_convergence_pct": 83.4,
+      "functional_convergence_pct": 73.6,
+      "filter_response_match_pct": 16.3,
+      "avg_cutoff_freq_error_pct": null
+    }
+  }
+}
