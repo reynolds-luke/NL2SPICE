@@ -1,0 +1,187 @@
+[
+  {
+    "index": 0,
+    "source_file": "lpf_dataset.json",
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "stages": 1,
+    "params": {
+      "fc_hz": 649.3816315762111,
+      "fs_hz": 398345.10493186786,
+      "atten_db": 54.0,
+      "pb_loss_db": 1.1
+    },
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   86.2k\nC1   VOUT   0      2.61n\n",
+    "prompt": "Create a simple low-pass filter for a low-impedance signal source. The passband should extend to 124 Hz with less than 1.1 dB insertion loss. At 398 kHz the circuit should provide at least 54.0 dB of rejection. Minimise cost; no active components are permitted.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 124.1 Hz  [max loss: 1.1 dB]\n  Stopband edge (fs): 398.3 kHz  [min attenuation: 54.0 dB]",
+    "llm_response": "```spice\n* Low-pass filter design for a low-impedance signal source\n\n* Component values calculation\n* Using Butterworth filter design for simplicity\n* f_c = 124.1 Hz, f_s = 398.3 kHz\n* Order of the filter can be determined using the formula:\n* N = log((10^(A_s/10) - 1) * (f_s/f_c)^2) / (2 * log(10))\n\n* For simplicity, let's assume a 2nd order filter (N=2)\n* Calculate the cutoff frequency in rad/s\n* w_c = 2 * pi * f_c\n* w_c = 2 * pi * 124.1 = 779.5 rad/s\n\n* Calculate the capacitance C\n* w_c = 1 / (R * C)\n* C = 1 / (w_c * R)\n* Assume R = 1 kOhm for simplicity\n* C = 1 / (779.5 * 1000) = 1.28e-6 F = 1.28 uF\n\n* Calculate the inductance L\n* w_c = sqrt(L / (R * C))\n* L = w_c^2 * R * C\n* L = (779.5)^2 * 1000 * 1.28e-6 = 7.79 mH\n\n* Circuit elements\nR1 VIN VOUT 1k\nL1 VOUT GND 7.79m\nC1 VOUT GND 1.28u\n\n* AC voltage source\nV1 VIN GND AC 1\n\n* End of netlist\n.END\n```",
+    "generation_time_s": 23.936,
+    "tokens_generated": 378,
+    "generated_netlist": "* Low-pass filter design for a low-impedance signal source\n\n* Component values calculation\n* Using Butterworth filter design for simplicity\n* f_c = 124.1 Hz, f_s = 398.3 kHz\n* Order of the filter can be determined using the formula:\n* N = log((10^(A_s/10) - 1) * (f_s/f_c)^2) / (2 * log(10))\n\n* For simplicity, let's assume a 2nd order filter (N=2)\n* Calculate the cutoff frequency in rad/s\n* w_c = 2 * pi * f_c\n* w_c = 2 * pi * 124.1 = 779.5 rad/s\n\n* Calculate the capacitance C\n* w_c = 1 / (R * C)\n* C = 1 / (w_c * R)\n* Assume R = 1 kOhm for simplicity\n* C = 1 / (779.5 * 1000) = 1.28e-6 F = 1.28 uF\n\n* Calculate the inductance L\n* w_c = sqrt(L / (R * C))\n* L = w_c^2 * R * C\n* L = (779.5)^2 * 1000 * 1.28e-6 = 7.79 mH\n\n* Circuit elements\nR1 VIN VOUT 1k\nL1 VOUT GND 7.79m\nC1 VOUT GND 1.28u\n\n* AC voltage source\nV1 VIN GND AC 1\n\n* End of netlist\n.END",
+    "parse_success": true,
+    "netlist_warnings": [],
+    "spice_file_content": "* LLM-generated filter netlist \u2014 auto-simulated by pipeline_v2.py\n\n* Low-pass filter design for a low-impedance signal source\n\n* Component values calculation\n* Using Butterworth filter design for simplicity\n* f_c = 124.1 Hz, f_s = 398.3 kHz\n* Order of the filter can be determined using the formula:\n* N = log((10^(A_s/10) - 1) * (f_s/f_c)^2) / (2 * log(10))\n\n* For simplicity, let's assume a 2nd order filter (N=2)\n* Calculate the cutoff frequency in rad/s\n* w_c = 2 * pi * f_c\n* w_c = 2 * pi * 124.1 = 779.5 rad/s\n\n* Calculate the capacitance C\n* w_c = 1 / (R * C)\n* C = 1 / (w_c * R)\n* Assume R = 1 kOhm for simplicity\n* C = 1 / (779.5 * 1000) = 1.28e-6 F = 1.28 uF\n\n* Calculate the inductance L\n* w_c = sqrt(L / (R * C))\n* L = w_c^2 * R * C\n* L = (779.5)^2 * 1000 * 1.28e-6 = 7.79 mH\n\n* Circuit elements\nR1 VIN VOUT 1k\nL1 VOUT GND 7.79m\nC1 VOUT GND 1.28u\n\n* AC voltage source\nV1 VIN GND AC 1\n\n* End of netlist\n\n.ac dec 200 6.49382 3.98345e+07\n\n.control\nrun\nwrdata /tmp/tmpfxrzo0q4/ac_out.txt v(vout)\n.endc\n\n.end",
+    "ngspice_returncode": 0,
+    "ngspice_stderr": "Note: v1: has no value, DC 0 assumed\n",
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_hz_measured": 1657.3330667622088,
+      "cutoff_freq_error_pct": 155.2171152022653,
+      "passband_ripple_db": 41.4537,
+      "attenuation_at_fs": {
+        "fs_hz": 398345.10493186786,
+        "achieved_db": 70.1,
+        "required_db": 54.0,
+        "met": true
+      },
+      "filter_response_match": false
+    }
+  },
+  {
+    "index": 1,
+    "source_file": "lpf_dataset.json",
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "stages": 1,
+    "params": {
+      "fc_hz": 3651.7412725483823,
+      "fs_hz": 46461.65528588571,
+      "atten_db": 21.6,
+      "pb_loss_db": 2.3
+    },
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   5.18k\nC1   VOUT   0      8.93n\n",
+    "prompt": "Create a simple low-pass filter for a low-impedance signal source. The passband should extend to 2 kHz with less than 2.3 dB insertion loss. At 46.5 kHz the circuit should provide at least 21.6 dB of rejection. Minimise cost; no active components are permitted.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 1.997 kHz  [max loss: 2.3 dB]\n  Stopband edge (fs): 46.46 kHz  [min attenuation: 21.6 dB]",
+    "llm_response": "```spice\n* Low-pass filter design\nR1 VIN VOUT 1000\nC1 VOUT GND 10uF\n\n* AC voltage source\nV1 VIN GND AC 1\n\n.END\n```",
+    "generation_time_s": 3.021,
+    "tokens_generated": 50,
+    "generated_netlist": "* Low-pass filter design\nR1 VIN VOUT 1000\nC1 VOUT GND 10uF\n\n* AC voltage source\nV1 VIN GND AC 1\n\n.END",
+    "parse_success": true,
+    "netlist_warnings": [],
+    "spice_file_content": "* LLM-generated filter netlist \u2014 auto-simulated by pipeline_v2.py\n\n* Low-pass filter design\nR1 VIN VOUT 1000\nC1 VOUT GND 10uF\n\n* AC voltage source\nV1 VIN GND AC 1\n\n.ac dec 200 36.5174 4.64617e+06\n\n.control\nrun\nwrdata /tmp/tmp1w15m3_1/ac_out.txt v(vout)\n.endc\n\n.end",
+    "ngspice_returncode": 0,
+    "ngspice_stderr": "Note: v1: has no value, DC 0 assumed\n",
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_hz_measured": 53.970552488117974,
+      "cutoff_freq_error_pct": 98.52205979394442,
+      "passband_ripple_db": 39.1807,
+      "attenuation_at_fs": {
+        "fs_hz": 46461.65528588571,
+        "achieved_db": 61.34,
+        "required_db": 21.6,
+        "met": true
+      },
+      "filter_response_match": false
+    }
+  },
+  {
+    "index": 2,
+    "source_file": "lpf_dataset.json",
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "stages": 1,
+    "params": {
+      "fc_hz": 20535.25026457149,
+      "fs_hz": 12498676.280903859,
+      "atten_db": 55.2,
+      "pb_loss_db": 1.2
+    },
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   2.36k\nC1   VOUT   0      3.47n\n",
+    "prompt": "Design a low-pass filter for a standard-impedance signal path. Pass signals through 4.5 kHz with under 1.2 dB loss. Provide at least 55.2 dB of attenuation at 12.5 MHz. Use only passive components and optimise for minimum BOM cost.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 4.495 kHz  [max loss: 1.2 dB]\n  Stopband edge (fs): 12.5 MHz  [min attenuation: 55.2 dB]",
+    "llm_response": "```spice\n* Low-pass filter design for 4.5 kHz cutoff frequency\n\nR1 VIN VOUT 1000\nC1 VOUT GND 100e-9\n\n.END\n```",
+    "generation_time_s": 2.788,
+    "tokens_generated": 46,
+    "generated_netlist": "* Low-pass filter design for 4.5 kHz cutoff frequency\n\nR1 VIN VOUT 1000\nC1 VOUT GND 100e-9\n\n.END",
+    "parse_success": true,
+    "netlist_warnings": [
+      "V1 source not found \u2014 no AC stimulus defined"
+    ],
+    "spice_file_content": "* LLM-generated filter netlist \u2014 auto-simulated by pipeline_v2.py\n\n* Low-pass filter design for 4.5 kHz cutoff frequency\n\nR1 VIN VOUT 1000\nC1 VOUT GND 100e-9\n\n.ac dec 200 205.353 1.24987e+09\n\n.control\nrun\nwrdata /tmp/tmpkjhf_vm9/ac_out.txt v(vout)\n.endc\n\n.end",
+    "ngspice_returncode": 0,
+    "ngspice_stderr": "Warning: singular matrix:  check node vin\n\nNote: Starting dynamic gmin stepping\nTrying gmin =   1.0000E-03 Note: One successful gmin step\nTrying gmin =   1.0000E-04 Note: One successful gmin step\nTrying gmin =   1.0000E-05 Note: One successful gmin step\nTrying gmin =   1.0000E-06 Note: One successful gmin step\nTrying gmin =   1.0000E-07 Note: One successful gmin step\nTrying gmin =   1.0000E-08 Note: One successful gmin step\nTrying gmin =   1.0000E-09 Note: One successful gmin step\nTrying gmin =   1.0000E-10 Note: One successful gmin step\nTrying gmin =   1.0000E-11 Note: One successful gmin step\nTrying gmin =   1.0000E-12 Note: One successful gmin step\nTrying gmin =   1.0000E-12 Note: One successful gmin step\nWarning: singular matrix:  check node vin\n\nWarning: Dynamic gmin stepping failed\nNote: Starting true gmin stepping\nTrying gmin =   1.0000E-03 Warning: singular matrix:  check node vin\n\nWarning: Further gmin increment\nTrying gmin =   5.6234E-03 Warning: singular matrix:  check node vin\n\nWarning: Further gmin increment\nTrying gmin =   8.6596E-03 Warning: singular matrix:  check node vin\n\nWarning: Further gmin increment\nTrying gmin =   9.6466E-03 Warning: singular matrix:  check node vin\n\nWarning: Further gmin increment\nTrying gmin =   9.9105E-03 Warning: Further gmin increment\nTrying gmin =   9.9775E-03 Warning: Further gmin increment\nTrying gmin =   9.9944E-03 Warning: Further gmin increment\nTrying gmin =   9.9986E-03 Warning: Further gmin increment\nTrying gmin =   9.9996E-03 Warning: Last gmin step failed\nWarning: True gmin stepping failed\nNote: Starting source stepping\nSupplies reduced to   0.0000% \nTrying gmin =   1.0000E-02 Note: One successful gmin step\nTrying gmin =   1.0000E-03 Note: One successful gmin step\nTrying gmin =   1.0000E-04 Note: One successful gmin step\nTrying gmin =   1.0000E-05 Note: One successful gmin step\nTrying gmin =   1.0000E-06 Note: One successful gmin step\nTrying gmin =   1.0000E-07 Note: One successful gmin step\nTrying gmin =   1.00",
+    "simulation_converged": true,
+    "metrics": {
+      "passband_ripple_db": 0.0,
+      "attenuation_at_fs": {
+        "fs_hz": 12498676.280903859,
+        "achieved_db": 0.0,
+        "required_db": 55.2,
+        "met": false
+      },
+      "filter_response_match": false
+    }
+  },
+  {
+    "index": 3,
+    "source_file": "lpf_dataset.json",
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "stages": 1,
+    "params": {
+      "fc_hz": 1154.7819846894583,
+      "fs_hz": 276308.501085171,
+      "atten_db": 46.0,
+      "pb_loss_db": 1.1
+    },
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   1.66k\nC1   VOUT   0      77.5n\n",
+    "prompt": "A simple anti-aliasing filter is required. It must pass signals at 139 Hz with less than 1.1 dB attenuation while rejecting frequencies at 276 kHz by at least 46.0 dB. The circuit must use only passive components and should be as low-cost as possible.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 139.4 Hz  [max loss: 1.1 dB]\n  Stopband edge (fs): 276.3 kHz  [min attenuation: 46.0 dB]",
+    "llm_response": "```spice\n* Simple Anti-Aliasing Low-Pass Filter\n\n* Input Voltage Source\nV1 VIN GND AC 1\n\n* Resistor and Capacitor for the RC Low-Pass Filter\nR1 VIN VOUT 1000\nC1 VOUT GND 1.59e-6\n\n* End of Netlist\n.END\n```",
+    "generation_time_s": 4.657,
+    "tokens_generated": 78,
+    "generated_netlist": "* Simple Anti-Aliasing Low-Pass Filter\n\n* Input Voltage Source\nV1 VIN GND AC 1\n\n* Resistor and Capacitor for the RC Low-Pass Filter\nR1 VIN VOUT 1000\nC1 VOUT GND 1.59e-6\n\n* End of Netlist\n.END",
+    "parse_success": true,
+    "netlist_warnings": [],
+    "spice_file_content": "* LLM-generated filter netlist \u2014 auto-simulated by pipeline_v2.py\n\n* Simple Anti-Aliasing Low-Pass Filter\n\n* Input Voltage Source\nV1 VIN GND AC 1\n\n* Resistor and Capacitor for the RC Low-Pass Filter\nR1 VIN VOUT 1000\nC1 VOUT GND 1.59e-6\n\n* End of Netlist\n\n.ac dec 200 11.5478 2.76309e+07\n\n.control\nrun\nwrdata /tmp/tmpmost1w19/ac_out.txt v(vout)\n.endc\n\n.end",
+    "ngspice_returncode": 0,
+    "ngspice_stderr": "Note: v1: has no value, DC 0 assumed\n",
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_hz_measured": 101.18190336935817,
+      "cutoff_freq_error_pct": 91.23800815124702,
+      "passband_ripple_db": 21.1416,
+      "attenuation_at_fs": {
+        "fs_hz": 276308.501085171,
+        "achieved_db": 68.76,
+        "required_db": 46.0,
+        "met": true
+      },
+      "filter_response_match": false
+    }
+  },
+  {
+    "index": 4,
+    "source_file": "lpf_dataset.json",
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "stages": 1,
+    "params": {
+      "fc_hz": 649.3816315762111,
+      "fs_hz": 404491.413613418,
+      "atten_db": 55.2,
+      "pb_loss_db": 1.4
+    },
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   25.9k\nC1   VOUT   0      9.79n\n",
+    "prompt": "Design a low-pass filter for a standard-impedance signal path. Pass signals through 182 Hz with under 1.4 dB loss. Provide at least 55.2 dB of attenuation at 404 kHz. Use only passive components and optimise for minimum BOM cost.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 182 Hz  [max loss: 1.4 dB]\n  Stopband edge (fs): 404.5 kHz  [min attenuation: 55.2 dB]",
+    "llm_response": "```spice\n* Low-pass filter design for 182 Hz cutoff frequency\n* Using passive components: R1, R2, C1, C2\n\n* Input voltage source\nV1 VIN GND AC 1\n\n* First stage resistor\nR1 VIN VOUT 1000\n\n* First stage capacitor\nC1 VOUT GND 1.5915e-6\n\n* Second stage resistor\nR2 VOUT GND 1000\n\n* Second stage capacitor\nC2 GND GND 1.5915e-6\n\n* End of netlist\n.END\n```",
+    "generation_time_s": 7.987,
+    "tokens_generated": 135,
+    "generated_netlist": "* Low-pass filter design for 182 Hz cutoff frequency\n* Using passive components: R1, R2, C1, C2\n\n* Input voltage source\nV1 VIN GND AC 1\n\n* First stage resistor\nR1 VIN VOUT 1000\n\n* First stage capacitor\nC1 VOUT GND 1.5915e-6\n\n* Second stage resistor\nR2 VOUT GND 1000\n\n* Second stage capacitor\nC2 GND GND 1.5915e-6\n\n* End of netlist\n.END",
+    "parse_success": true,
+    "netlist_warnings": [],
+    "spice_file_content": "* LLM-generated filter netlist \u2014 auto-simulated by pipeline_v2.py\n\n* Low-pass filter design for 182 Hz cutoff frequency\n* Using passive components: R1, R2, C1, C2\n\n* Input voltage source\nV1 VIN GND AC 1\n\n* First stage resistor\nR1 VIN VOUT 1000\n\n* First stage capacitor\nC1 VOUT GND 1.5915e-6\n\n* Second stage resistor\nR2 VOUT GND 1000\n\n* Second stage capacitor\nC2 GND GND 1.5915e-6\n\n* End of netlist\n\n.ac dec 200 6.49382 4.04491e+07\n\n.control\nrun\nwrdata /tmp/tmpivm7hskk/ac_out.txt v(vout)\n.endc\n\n.end",
+    "ngspice_returncode": 0,
+    "ngspice_stderr": "Note: v1: has no value, DC 0 assumed\n",
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_hz_measured": 199.73941308743153,
+      "cutoff_freq_error_pct": 69.24159794871096,
+      "passband_ripple_db": 10.5505,
+      "attenuation_at_fs": {
+        "fs_hz": 404491.413613418,
+        "achieved_db": 66.11,
+        "required_db": 55.2,
+        "met": true
+      },
+      "filter_response_match": false
+    }
+  }
+]

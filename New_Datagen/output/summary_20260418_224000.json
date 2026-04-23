@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-04-18T22:40:55.962052",
+  "total_entries": 5,
+  "parse_success_rate_pct": 100.0,
+  "simulation_convergence_pct": 100.0,
+  "functional_convergence_pct": 80.0,
+  "filter_response_match_pct": 0.0,
+  "filter_response_match_pct_of_all": 0.0,
+  "avg_generation_time_s": 8.478,
+  "token_efficiency_per_netlist": 137.4,
+  "per_task_type": {
+    "low_pass_filter": {
+      "total": 5,
+      "parse_success_rate_pct": 100.0,
+      "simulation_convergence_pct": 100.0,
+      "functional_convergence_pct": 80.0,
+      "filter_response_match_pct": 0.0,
+      "avg_cutoff_freq_error_pct": 103.55
+    }
+  }
+}
