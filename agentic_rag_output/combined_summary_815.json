@@ -1,0 +1,178 @@
+{
+  "generated_at": "2026-04-26T18:16:51.858252",
+  "source_files": [
+    "rag_output/results_lpf_20260426_022907.json",
+    "rag_output/results_hpf_20260426_022907.json",
+    "rag_output/results_bpf_20260426_022907.json",
+    "rag_output/ckpt_notch.json"
+  ],
+  "total_entries": 815,
+  "overall": {
+    "n": 815,
+    "parse_pct": 97.9,
+    "conv_pct": 97.9,
+    "spec_pct": 45.0,
+    "avg_iters": 3.46
+  },
+  "by_task_type": {
+    "band_pass_filter": {
+      "n": 248,
+      "parse_pct": 98.4,
+      "conv_pct": 98.4,
+      "spec_pct": 2.8,
+      "avg_iters": 4.94
+    },
+    "high_pass_filter": {
+      "n": 248,
+      "parse_pct": 100.0,
+      "conv_pct": 100.0,
+      "spec_pct": 67.3,
+      "avg_iters": 2.62
+    },
+    "low_pass_filter": {
+      "n": 248,
+      "parse_pct": 98.4,
+      "conv_pct": 98.4,
+      "spec_pct": 64.5,
+      "avg_iters": 2.82
+    },
+    "notch_filter": {
+      "n": 71,
+      "parse_pct": 87.3,
+      "conv_pct": 87.3,
+      "spec_pct": 46.5,
+      "avg_iters": 3.48
+    }
+  },
+  "by_topology": {
+    "buffered_rc_multi": {
+      "n": 186,
+      "parse_pct": 99.5,
+      "conv_pct": 99.5,
+      "spec_pct": 25.8,
+      "avg_iters": 4.05
+    },
+    "buffered_rc_single": {
+      "n": 186,
+      "parse_pct": 98.4,
+      "conv_pct": 98.4,
+      "spec_pct": 66.1,
+      "avg_iters": 2.84
+    },
+    "rc_multi": {
+      "n": 195,
+      "parse_pct": 96.4,
+      "conv_pct": 96.4,
+      "spec_pct": 23.1,
+      "avg_iters": 4.16
+    },
+    "rc_single": {
+      "n": 248,
+      "parse_pct": 97.6,
+      "conv_pct": 97.6,
+      "spec_pct": 60.9,
+      "avg_iters": 2.93
+    }
+  },
+  "by_task_x_topology": {
+    "band_pass_filter|buffered_rc_multi": {
+      "n": 62,
+      "parse_pct": 98.4,
+      "conv_pct": 98.4,
+      "spec_pct": 1.6,
+      "avg_iters": 4.94
+    },
+    "band_pass_filter|buffered_rc_single": {
+      "n": 62,
+      "parse_pct": 98.4,
+      "conv_pct": 98.4,
+      "spec_pct": 6.5,
+      "avg_iters": 4.85
+    },
+    "band_pass_filter|rc_multi": {
+      "n": 62,
+      "parse_pct": 98.4,
+      "conv_pct": 98.4,
+      "spec_pct": 3.2,
+      "avg_iters": 4.98
+    },
+    "band_pass_filter|rc_single": {
+      "n": 62,
+      "parse_pct": 98.4,
+      "conv_pct": 98.4,
+      "spec_pct": 0.0,
+      "avg_iters": 5.0
+    },
+    "high_pass_filter|buffered_rc_multi": {
+      "n": 62,
+      "parse_pct": 100.0,
+      "conv_pct": 100.0,
+      "spec_pct": 35.5,
+      "avg_iters": 3.65
+    },
+    "high_pass_filter|buffered_rc_single": {
+      "n": 62,
+      "parse_pct": 100.0,
+      "conv_pct": 100.0,
+      "spec_pct": 96.8,
+      "avg_iters": 1.69
+    },
+    "high_pass_filter|rc_multi": {
+      "n": 62,
+      "parse_pct": 100.0,
+      "conv_pct": 100.0,
+      "spec_pct": 40.3,
+      "avg_iters": 3.39
+    },
+    "high_pass_filter|rc_single": {
+      "n": 62,
+      "parse_pct": 100.0,
+      "conv_pct": 100.0,
+      "spec_pct": 96.8,
+      "avg_iters": 1.74
+    },
+    "low_pass_filter|buffered_rc_multi": {
+      "n": 62,
+      "parse_pct": 100.0,
+      "conv_pct": 100.0,
+      "spec_pct": 40.3,
+      "avg_iters": 3.58
+    },
+    "low_pass_filter|buffered_rc_single": {
+      "n": 62,
+      "parse_pct": 96.8,
+      "conv_pct": 96.8,
+      "spec_pct": 95.2,
+      "avg_iters": 1.97
+    },
+    "low_pass_filter|rc_multi": {
+      "n": 62,
+      "parse_pct": 98.4,
+      "conv_pct": 98.4,
+      "spec_pct": 25.8,
+      "avg_iters": 4.13
+    },
+    "low_pass_filter|rc_single": {
+      "n": 62,
+      "parse_pct": 98.4,
+      "conv_pct": 98.4,
+      "spec_pct": 96.8,
+      "avg_iters": 1.6
+    },
+    "notch_filter|rc_multi": {
+      "n": 9,
+      "parse_pct": 44.4,
+      "conv_pct": 44.4,
+      "spec_pct": 22.2,
+      "avg_iters": 4.11
+    },
+    "notch_filter|rc_single": {
+      "n": 62,
+      "parse_pct": 93.5,
+      "conv_pct": 93.5,
+      "spec_pct": 50.0,
+      "avg_iters": 3.39
+    }
+  },
+  "notes": "notch is partial (71/248): rc_single complete, rc_multi 9/62 only"
+}

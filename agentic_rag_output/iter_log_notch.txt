@@ -1,0 +1,393 @@
+RAG PIPELINE — NOTCH — 2026-04-26T14:21:15.050926
+max_iters=5  entries=248
+======================================================================
+
+Entry 0  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 1  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 2  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 3  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 4  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 5  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✓
+
+Entry 6  notch/rc_single  spec=✓
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✓
+
+Entry 7  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 8  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 9  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 10  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 11  notch/rc_single  spec=✗
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 12  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 13  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 14  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✓
+
+Entry 15  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 16  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 17  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✓
+
+Entry 18  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 19  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 20  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 21  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✓
+
+Entry 22  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 23  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 24  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 25  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 26  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 27  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✓
+
+Entry 28  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 29  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✓
+
+Entry 30  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 31  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 32  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✓
+
+Entry 33  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 34  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 35  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 36  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 37  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 38  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 39  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 40  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 41  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 42  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 43  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 44  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 45  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 46  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 47  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✗  sim=✗  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✓
+
+Entry 48  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 49  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 50  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 51  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 52  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✓
+
+Entry 53  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 54  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 55  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 56  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 57  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 58  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 59  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 60  notch/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✓
+
+Entry 61  notch/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 62  notch/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✗  sim=✗  spec=✗
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 63  notch/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 64  notch/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗
+
+Entry 65  notch/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 66  notch/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓
+
+Entry 67  notch/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 68  notch/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✗  sim=✗  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 69  notch/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✗  sim=✗  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 70  notch/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✗  sim=✗  spec=✗
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+

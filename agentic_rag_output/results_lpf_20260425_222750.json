@@ -1,0 +1,408 @@
+[
+  {
+    "index": 0,
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_hz": 649.3816315762111,
+      "fs_hz": 398345.10493186786,
+      "atten_db": 54.0,
+      "pb_loss_db": 1.1
+    },
+    "prompt": "Create a simple low-pass filter for a low-impedance signal source. The passband should extend to 124 Hz with less than 1.1 dB insertion loss. At 398 kHz the circuit should provide at least 54.0 dB of rejection. Minimise cost; no active components are permitted.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 124.1 Hz  [max loss: 1.1 dB]\n  Stopband edge (fs): 398.3 kHz  [min attenuation: 54.0 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   86.2k\nC1   VOUT   0      2.61n\n",
+    "rag_doc_used": "lpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 26.39,
+        "tokens_generated": 1024,
+        "parse_success": false,
+        "cot_reasoning": "",
+        "generated_netlist": null,
+        "simulation_converged": false,
+        "metrics": {},
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 26.56,
+        "tokens_generated": 1024,
+        "parse_success": false,
+        "cot_reasoning": "",
+        "generated_netlist": null,
+        "simulation_converged": false,
+        "metrics": {},
+        "spec_met": false
+      },
+      {
+        "iteration": 3,
+        "generation_time_s": 28.44,
+        "tokens_generated": 1024,
+        "parse_success": false,
+        "cot_reasoning": "",
+        "generated_netlist": null,
+        "simulation_converged": false,
+        "metrics": {},
+        "spec_met": false
+      },
+      {
+        "iteration": 4,
+        "generation_time_s": 30.28,
+        "tokens_generated": 1024,
+        "parse_success": false,
+        "cot_reasoning": "",
+        "generated_netlist": null,
+        "simulation_converged": false,
+        "metrics": {},
+        "spec_met": false
+      },
+      {
+        "iteration": 5,
+        "generation_time_s": 32.16,
+        "tokens_generated": 1024,
+        "parse_success": false,
+        "cot_reasoning": "",
+        "generated_netlist": null,
+        "simulation_converged": false,
+        "metrics": {},
+        "spec_met": false
+      }
+    ],
+    "parse_success": false,
+    "simulation_converged": false,
+    "metrics": {},
+    "generated_netlist": null,
+    "generation_time_s": 143.84,
+    "tokens_generated": 5120,
+    "final_spec_met": false,
+    "iterations_used": 5
+  },
+  {
+    "index": 1,
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_hz": 3651.7412725483823,
+      "fs_hz": 46461.65528588571,
+      "atten_db": 21.6,
+      "pb_loss_db": 2.3
+    },
+    "prompt": "Create a simple low-pass filter for a low-impedance signal source. The passband should extend to 2 kHz with less than 2.3 dB insertion loss. At 46.5 kHz the circuit should provide at least 21.6 dB of rejection. Minimise cost; no active components are permitted.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 1.997 kHz  [max loss: 2.3 dB]\n  Stopband edge (fs): 46.46 kHz  [min attenuation: 21.6 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   5.18k\nC1   VOUT   0      8.93n\n",
+    "rag_doc_used": "lpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 8.37,
+        "tokens_generated": 347,
+        "parse_success": true,
+        "cot_reasoning": "\u2550\u2550 STEP 1 \u2014 DETERMINE FILTER ORDER \u2550\u2550\nI need a 1st-order low-pass filter.\n\n\u2550\u2550 STEP 2 \u2014 COMPUTE COMPONENT VALUES \u2550\u2550\nFirst, calculate the product R\u00b7C for the desired cutoff frequency (fc):\n\\[ R \\cdot C = \\frac{1}{2\\pi \\cdot f_c} = \\frac{1}{2\\pi \\cdot 1997 \\text{ Hz}} \\approx 7.92 \\times 10^{-7} \\text{ s} \\]\n\nChoose R = 10 k\u03a9 (a common value for low-pass filters):\n\\[ C = \\frac{7.92 \\times 10^{-7} \\text{ s}}{10 \\times 10^3 \\Omega} = 7.92 \\times 10^{-11} \\text{ F} = 79.2 \\text{ pF} \\]\n\nVerify the calculated values:\n\\[ f_c = \\frac{1}{2\\pi \\cdot 10 \\times 10^3 \\Omega \\cdot 79.2 \\times 10^{-12} \\text{ F}} \\approx 1997 \\text{ Hz} \\]\n\nThe calculated values meet the requirements.\n\n\u2550\u2550 STEP 3 \u2014 WRITE THE NETLIST \u2550\u2550",
+        "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      79.2p\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_hz_measured": 200474.20310909595,
+          "cutoff_freq_error_pct": 5389.82493957449,
+          "passband_ripple_db": 0.0014,
+          "attenuation_at_fs": {
+            "fs_hz": 46461.65528588571,
+            "achieved_db": 0.23,
+            "required_db": 21.6,
+            "met": false
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 8.56,
+        "tokens_generated": 340,
+        "parse_success": true,
+        "cot_reasoning": "\u2550\u2550 STEP 1 \u2014 DETERMINE FILTER ORDER \u2550\u2550\nI need a 1st-order low-pass filter.\n\n\u2550\u2550 STEP 2 \u2014 COMPUTE COMPONENT VALUES \u2550\u2550\nFirst, calculate the product R\u00b7C for the desired cutoff frequency (fc):\n\\[ R \\cdot C = \\frac{1}{2\\pi \\cdot f_c} = \\frac{1}{2\\pi \\cdot 3652 \\text{ Hz}} \\approx 4.358 \\times 10^{-5} \\text{ s} \\]\n\nChoose R = 10 k\u03a9:\n\\[ C = \\frac{4.358 \\times 10^{-5} \\text{ s}}{10 \\times 10^3 \\Omega} = 4.358 \\times 10^{-9} \\text{ F} = 4.36 \\text{ nF} \\]\n\nVerify the calculated values:\n\\[ f_c = \\frac{1}{2\\pi \\cdot 10 \\times 10^3 \\Omega \\cdot 4.36 \\times 10^{-9} \\text{ F}} \\approx 3652 \\text{ Hz} \\]\n\nThe calculated values meet the requirements.\n\n\u2550\u2550 STEP 3 \u2014 WRITE THE NETLIST \u2550\u2550",
+        "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      4.36n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_hz_measured": 3641.9921417241476,
+          "cutoff_freq_error_pct": 0.2669721126609623,
+          "passband_ripple_db": 2.9796,
+          "attenuation_at_fs": {
+            "fs_hz": 46461.65528588571,
+            "achieved_db": 22.12,
+            "required_db": 21.6,
+            "met": true
+          },
+          "filter_response_match": true
+        },
+        "spec_met": true
+      }
+    ],
+    "parse_success": true,
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_hz_measured": 3641.9921417241476,
+      "cutoff_freq_error_pct": 0.2669721126609623,
+      "passband_ripple_db": 2.9796,
+      "attenuation_at_fs": {
+        "fs_hz": 46461.65528588571,
+        "achieved_db": 22.12,
+        "required_db": 21.6,
+        "met": true
+      },
+      "filter_response_match": true
+    },
+    "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      4.36n\n.end",
+    "generation_time_s": 16.93,
+    "tokens_generated": 687,
+    "final_spec_met": true,
+    "iterations_used": 2
+  },
+  {
+    "index": 2,
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_hz": 20535.25026457149,
+      "fs_hz": 12498676.280903859,
+      "atten_db": 55.2,
+      "pb_loss_db": 1.2
+    },
+    "prompt": "Design a low-pass filter for a standard-impedance signal path. Pass signals through 4.5 kHz with under 1.2 dB loss. Provide at least 55.2 dB of attenuation at 12.5 MHz. Use only passive components and optimise for minimum BOM cost.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 4.495 kHz  [max loss: 1.2 dB]\n  Stopband edge (fs): 12.5 MHz  [min attenuation: 55.2 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   2.36k\nC1   VOUT   0      3.47n\n",
+    "rag_doc_used": "lpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 24.73,
+        "tokens_generated": 1024,
+        "parse_success": false,
+        "cot_reasoning": "",
+        "generated_netlist": null,
+        "simulation_converged": false,
+        "metrics": {},
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 5.41,
+        "tokens_generated": 204,
+        "parse_success": true,
+        "cot_reasoning": "I apologize for the oversight. Let's finalize the design and provide the correct SPICE netlist.\n\n\u2550\u2550 STEP 3 \u2014 WRITE THE NETLIST \u2550\u2550\n\nHere is the corrected SPICE netlist for the 1st-order low-pass filter with the specified requirements:",
+        "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   30k\nC1   VOUT  0      1.05n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_hz_measured": 5048.881500647284,
+          "cutoff_freq_error_pct": 75.41358670774086,
+          "passband_ripple_db": 12.3579,
+          "attenuation_at_fs": {
+            "fs_hz": 12498676.280903859,
+            "achieved_db": 67.86,
+            "required_db": 55.2,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 3,
+        "generation_time_s": 13.09,
+        "tokens_generated": 491,
+        "parse_success": true,
+        "cot_reasoning": "Thank you for the feedback. Let's revise the component values to meet the required cutoff frequency of 20.54 kHz.\n\n\u2550\u2550 STEP 2 \u2014 COMPUTE COMPONENT VALUES \u2550\u2550\nWe need to compute R and C such that \\( R \\cdot C = \\frac{1}{2\\pi \\cdot 20.54 \\text{ kHz}} \\).\n\n\\[ R \\cdot C = \\frac{1}{2\\pi \\cdot 20.54 \\times 10^3} \\]\n\\[ R \\cdot C = \\frac{1}{2\\pi \\cdot 20540} \\]\n\\[ R \\cdot C \\approx 7.7503 \\times 10^{-6} \\text{ s} \\]\n\nLet's choose R = 10 k\u03a9 and compute C accordingly:\n\\[ C = \\frac{7.7503 \\times 10^{-6}}{10 \\times 10^3} \\]\n\\[ C \\approx 0.775 \\text{ nF} \\]\n\nThis value is within the acceptable range of [1 nF, 100 nF].\n\nVerify the computed fc:\n\\[ f_c = \\frac{1}{2\\pi \\cdot 10 \\text{k\u03a9} \\cdot 0.775 \\text{nF}} \\]\n\\[ f_c \\approx 20.54 \\text{ kHz} \\]\n\nThis matches the required passband edge.\n\n\u2550\u2550 STEP 3 \u2014 WRITE ",
+        "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      0.775n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_hz_measured": 20489.132823208045,
+          "cutoff_freq_error_pct": 0.2245769628773786,
+          "passband_ripple_db": 2.9727,
+          "attenuation_at_fs": {
+            "fs_hz": 12498676.280903859,
+            "achieved_db": 55.69,
+            "required_db": 55.2,
+            "met": true
+          },
+          "filter_response_match": true
+        },
+        "spec_met": true
+      }
+    ],
+    "parse_success": true,
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_hz_measured": 20489.132823208045,
+      "cutoff_freq_error_pct": 0.2245769628773786,
+      "passband_ripple_db": 2.9727,
+      "attenuation_at_fs": {
+        "fs_hz": 12498676.280903859,
+        "achieved_db": 55.69,
+        "required_db": 55.2,
+        "met": true
+      },
+      "filter_response_match": true
+    },
+    "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      0.775n\n.end",
+    "generation_time_s": 43.23,
+    "tokens_generated": 1719,
+    "final_spec_met": true,
+    "iterations_used": 3
+  },
+  {
+    "index": 3,
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_hz": 1154.7819846894583,
+      "fs_hz": 276308.501085171,
+      "atten_db": 46.0,
+      "pb_loss_db": 1.1
+    },
+    "prompt": "A simple anti-aliasing filter is required. It must pass signals at 139 Hz with less than 1.1 dB attenuation while rejecting frequencies at 276 kHz by at least 46.0 dB. The circuit must use only passive components and should be as low-cost as possible.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 139.4 Hz  [max loss: 1.1 dB]\n  Stopband edge (fs): 276.3 kHz  [min attenuation: 46.0 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   1.66k\nC1   VOUT   0      77.5n\n",
+    "rag_doc_used": "lpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 12.96,
+        "tokens_generated": 540,
+        "parse_success": true,
+        "cot_reasoning": "\u2550\u2550 STEP 1 \u2014 DETERMINE FILTER ORDER \u2550\u2550\nI need a 1st-order low-pass filter.\n\n\u2550\u2550 STEP 2 \u2014 COMPUTE COMPONENT VALUES \u2550\u2550\nFirst, let's verify the single-stage roll-off meets the stopband spec. At stopband frequency fs = 276.3 kHz, the attenuation should be at least 46.0 dB.\n\nUsing the formula for attenuation:\n\\[ A(f) = 10 \\log_{10}(1 + (\\frac{f}{f_c})^2) \\]\n\nWe need:\n\\[ 46.0 \\leq 10 \\log_{10}(1 + (\\frac{276.3 \\times 10^3}{139.4})^2) \\]\n\nCalculating the right-hand side:\n\\[ 10 \\log_{10}(1 + (\\frac{276.3 \\times 10^3}{139.4})^2) \\approx 10 \\log_{10}(1 + 339.2^2) \\approx 10 \\log_{10}(115056.64) \\approx 47.4 \\text{ dB} \\]\n\nThis meets the requirement. Now, let's compute the component values.\n\nFor a single-pole RC stage:\n\\[ f_c = \\frac{1}{2\\pi R C} \\]\n\\[ R \\cdot C = \\frac{1}{2\\pi \\cdot 139.4} \\approx 1.1",
+        "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      115n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_hz_measured": 139.0274874842967,
+          "cutoff_freq_error_pct": 87.9607155872211,
+          "passband_ripple_db": 18.3848,
+          "attenuation_at_fs": {
+            "fs_hz": 276308.501085171,
+            "achieved_db": 65.98,
+            "required_db": 46.0,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 3.62,
+        "tokens_generated": 136,
+        "parse_success": true,
+        "cot_reasoning": "Based on the feedback, we need to decrease the product \\( R \\cdot C \\) to achieve the desired cutoff frequency of 1.155 kHz. Let's use the example values provided: \\( R = 10 \\text{k\u03a9} \\) and \\( C = 13.78 \\text{nF} \\).\n\nHere is the revised netlist:",
+        "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      13.78n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_hz_measured": 1152.3280473107582,
+          "cutoff_freq_error_pct": 0.21250222217140693,
+          "passband_ripple_db": 2.9715,
+          "attenuation_at_fs": {
+            "fs_hz": 276308.501085171,
+            "achieved_db": 47.58,
+            "required_db": 46.0,
+            "met": true
+          },
+          "filter_response_match": true
+        },
+        "spec_met": true
+      }
+    ],
+    "parse_success": true,
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_hz_measured": 1152.3280473107582,
+      "cutoff_freq_error_pct": 0.21250222217140693,
+      "passband_ripple_db": 2.9715,
+      "attenuation_at_fs": {
+        "fs_hz": 276308.501085171,
+        "achieved_db": 47.58,
+        "required_db": 46.0,
+        "met": true
+      },
+      "filter_response_match": true
+    },
+    "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      13.78n\n.end",
+    "generation_time_s": 16.58,
+    "tokens_generated": 676,
+    "final_spec_met": true,
+    "iterations_used": 2
+  },
+  {
+    "index": 4,
+    "task_type": "low_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_hz": 649.3816315762111,
+      "fs_hz": 404491.413613418,
+      "atten_db": 55.2,
+      "pb_loss_db": 1.4
+    },
+    "prompt": "Design a low-pass filter for a standard-impedance signal path. Pass signals through 182 Hz with under 1.4 dB loss. Provide at least 55.2 dB of attenuation at 404 kHz. Use only passive components and optimise for minimum BOM cost.\n\nREQUIREMENTS:\n  Type: low-pass filter\n  Passband edge (fc): 182 Hz  [max loss: 1.4 dB]\n  Stopband edge (fs): 404.5 kHz  [min attenuation: 55.2 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN    VOUT   25.9k\nC1   VOUT   0      9.79n\n",
+    "rag_doc_used": "lpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 8.16,
+        "tokens_generated": 339,
+        "parse_success": true,
+        "cot_reasoning": "\u2550\u2550 STEP 1 \u2014 DETERMINE FILTER ORDER \u2550\u2550\nI need a 1st-order low-pass filter.\n\n\u2550\u2550 STEP 2 \u2014 COMPUTE COMPONENT VALUES \u2550\u2550\nFirst, verify the single-stage roll-off meets the stopband spec:\nAt fs = 404.5 kHz, attenuation = 10\u00b7log10(1 + (404.5e3/182)\u00b2) \u2248 55.2 dB, which meets the requirement.\n\nChoose R in [1 k\u03a9, 100 k\u03a9]. A value of 10 k\u03a9 is a reasonable default.\n\nCompute C = 1 / (2\u03c0 \u00b7 fc \u00b7 R):\nC = 1 / (2\u03c0 \u00b7 182 \u00b7 10e3) \u2248 8.99 nF.\n\nVerify C is in [1 nF, 100 nF]. Since 8.99 nF is within the range, we proceed.\n\nCompute fc = 1/(2\u03c0\u00b7R\u00b7C) with the chosen values:\nfc = 1/(2\u03c0\u00b710e3\u00b78.99n) \u2248 182.2 Hz, which is close enough to the target 182 Hz.\n\n\u2550\u2550 STEP 3 \u2014 WRITE THE NETLIST \u2550\u2550",
+        "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      8.99n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_hz_measured": 1766.1520419871429,
+          "cutoff_freq_error_pct": 171.97443785101396,
+          "passband_ripple_db": 0.5395,
+          "attenuation_at_fs": {
+            "fs_hz": 404491.413613418,
+            "achieved_db": 47.18,
+            "required_db": 55.2,
+            "met": false
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 4.76,
+        "tokens_generated": 185,
+        "parse_success": true,
+        "cot_reasoning": "Based on the feedback, we need to increase the product of R and C to achieve the desired cutoff frequency of 649.4 Hz. Let's use R = 10 k\u03a9 and compute the corresponding C value.\n\nR\u00b7C = 1/(2\u03c0\u00b7649.4 Hz) = 2.4509e-04 s\n\nWith R = 10 k\u03a9:\nC = 2.4509e-04 s / 10e3 \u03a9 = 24.51 nF\n\nLet's update the netlist accordingly.",
+        "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      24.51n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_hz_measured": 647.8611710309139,
+          "cutoff_freq_error_pct": 0.2341397525530166,
+          "passband_ripple_db": 2.9732,
+          "attenuation_at_fs": {
+            "fs_hz": 404491.413613418,
+            "achieved_db": 55.89,
+            "required_db": 55.2,
+            "met": true
+          },
+          "filter_response_match": true
+        },
+        "spec_met": true
+      }
+    ],
+    "parse_success": true,
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_hz_measured": 647.8611710309139,
+      "cutoff_freq_error_pct": 0.2341397525530166,
+      "passband_ripple_db": 2.9732,
+      "attenuation_at_fs": {
+        "fs_hz": 404491.413613418,
+        "achieved_db": 55.89,
+        "required_db": 55.2,
+        "met": true
+      },
+      "filter_response_match": true
+    },
+    "generated_netlist": "* Single-stage passive RC low-pass filter\nV1   VIN   0     AC 1\n\nR1   VIN   VOUT   10k\nC1   VOUT  0      24.51n\n.end",
+    "generation_time_s": 12.92,
+    "tokens_generated": 524,
+    "final_spec_met": true,
+    "iterations_used": 2
+  }
+]

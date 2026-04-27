@@ -1,0 +1,982 @@
+[
+  {
+    "index": 0,
+    "task_type": "band_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_low_hz": 205.7,
+      "fc_high_hz": 4209.0,
+      "fs_low_hz": 9.032,
+      "fs_high_hz": 2847000.0,
+      "atten_low_db": 34.6,
+      "atten_high_db": 34.6,
+      "pb_loss_db": 15.8
+    },
+    "prompt": "Design a band-pass filter to band-limit a signal before sampling. The passband spans 206 Hz to 4.21 kHz and must have <= 15.8 dB insertion loss. A minimum of 34.6 dB rejection is required at 9.03 Hz and 2.85 MHz. Use only resistors and capacitors; minimise part count.\n\nREQUIREMENTS:\n  Type: band-pass filter\n  Lower passband edge (fc_low): 205.7 Hz  [max loss: 15.8 dB]\n  Upper passband edge (fc_high): 4.209 kHz  [max loss: 15.8 dB]\n  Lower stopband edge (fs_low): 9.032 Hz  [min attenuation: 34.6 dB]\n  Upper stopband edge (fs_high): 2.847 MHz  [min attenuation: 34.6 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN    NH1    4.32n\nRH1  NH1    0      68.0k\n\n* Low-pass section (sets upper cutoff)\nRL1  NH1    VOUT   3.95k\nCL1  VOUT   0      18.3n\n",
+    "rag_doc_used": "bpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 12.52,
+        "tokens_generated": 512,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nFor a single-stage RC band-pass filter, we need to design a second-order filter (two poles) to meet the specified requirements.\n\n### Step 2 \u2014 Compute Component Values\nWe will design the filter using the following steps:\n\n1. **Calculate the component values for the high-pass section:**\n   - \\( f_L = 205.7 \\, \\text{Hz} \\)\n   - Choose \\( R_{hp} = 10 \\, \\text{k}\\Omega \\)\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 205.7 \\cdot 10000} \\approx 7.75 \\, \\text{nF} \\)\n\n2. **Calculate the component values for the low-pass section:**\n   - \\( f_H = 4.209 \\, \\text{kHz} \\)\n   - Choose \\( R_{lp} = 10 \\, \\text{k}\\Omega \\)\n   - Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 4209 \\cdot 10000} \\app",
+        "generated_netlist": "* Band-pass filter with a passband from 205.7 Hz to 4.209 kHz\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    7.75n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   10k\nCL1  VOUT  0      3.78n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 936.364814145778,
+          "cutoff_freq_low_error_pct": 355.20895194252705,
+          "cutoff_freq_high_hz_measured": 9234.197972230657,
+          "cutoff_freq_high_error_pct": 119.39173134308999,
+          "passband_ripple_db": 14.1237,
+          "attenuation_at_fs_low": {
+            "fs_hz": 9.032,
+            "achieved_db": 41.22,
+            "required_db": 34.6,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2847000.0,
+            "achieved_db": 50.69,
+            "required_db": 34.6,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 17.51,
+        "tokens_generated": 683,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nFor a single-stage RC band-pass filter, we need to design a second-order filter (two poles) to meet the specified requirements.\n\n### Step 2 \u2014 Compute Component Values\nGiven the feedback that the current design does not meet the specifications, we will adjust the component values to achieve the desired cutoff frequencies.\n\n1. **Recalculate the component values for the high-pass section:**\n   - \\( f_L = 205.7 \\, \\text{Hz} \\)\n   - Choose \\( R_{hp} = 10 \\, \\text{k}\\Omega \\)\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 205.7 \\cdot 10000} \\approx 7.75 \\, \\text{nF} \\)\n\n2. **Recalculate the component values for the low-pass section:**\n   - \\( f_H = 4.209 \\, \\text{kHz} \\)\n   - Choose \\( R_{lp} = 10 \\, \\text{k}\\Omega \\)\n  ",
+        "generated_netlist": "* Band-pass filter with a passband from 205.7 Hz to 4.209 kHz\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    77.5n\nRH1  nh1   0      100k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   100k\nCL1  VOUT  0      37.8n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 9.363546154159847,
+          "cutoff_freq_low_error_pct": 95.44796006117654,
+          "cutoff_freq_high_hz_measured": 92.34255848281683,
+          "cutoff_freq_high_error_pct": 97.80606893602241,
+          "passband_ripple_db": 25.6155,
+          "attenuation_at_fs_low": {
+            "fs_hz": 9.032,
+            "achieved_db": 3.19,
+            "required_db": 34.6,
+            "met": false
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2847000.0,
+            "achieved_db": 90.69,
+            "required_db": 34.6,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 3,
+        "generation_time_s": 18.52,
+        "tokens_generated": 682,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nFor a single-stage RC band-pass filter, we need to design a second-order filter (two poles) to meet the specified requirements.\n\n### Step 2 \u2014 Compute Component Values\nGiven the feedback that the current design still does not meet the specifications, we will further adjust the component values to achieve the desired cutoff frequencies.\n\n1. **Recalculate the component values for the high-pass section:**\n   - \\( f_L = 205.7 \\, \\text{Hz} \\)\n   - Choose \\( R_{hp} = 10 \\, \\text{k}\\Omega \\)\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 205.7 \\cdot 10000} \\approx 7.75 \\, \\text{nF} \\)\n\n2. **Recalculate the component values for the low-pass section:**\n   - \\( f_H = 4.209 \\, \\text{kHz} \\)\n   - Choose \\( R_{lp} = 10 \\, \\text{",
+        "generated_netlist": "* Band-pass filter with a passband from 205.7 Hz to 4.209 kHz\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    7.75n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   100k\nCL1  VOUT  0      3.78n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 291.60084517023245,
+          "cutoff_freq_low_error_pct": 41.760255308815005,
+          "cutoff_freq_high_hz_measured": 2965.254650888494,
+          "cutoff_freq_high_error_pct": 29.549663794523784,
+          "passband_ripple_db": 5.0695,
+          "attenuation_at_fs_low": {
+            "fs_hz": 9.032,
+            "achieved_db": 31.06,
+            "required_db": 34.6,
+            "met": false
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2847000.0,
+            "achieved_db": 60.52,
+            "required_db": 34.6,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 4,
+        "generation_time_s": 19.45,
+        "tokens_generated": 679,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nFor a single-stage RC band-pass filter, we need to design a second-order filter (two poles) to meet the specified requirements.\n\n### Step 2 \u2014 Compute Component Values\nGiven the feedback that the current design still does not meet the specifications, we will further adjust the component values to achieve the desired cutoff frequencies.\n\n1. **Recalculate the component values for the high-pass section:**\n   - \\( f_L = 205.7 \\, \\text{Hz} \\)\n   - Choose \\( R_{hp} = 10 \\, \\text{k}\\Omega \\)\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 205.7 \\cdot 10000} \\approx 7.75 \\, \\text{nF} \\)\n\n2. **Recalculate the component values for the low-pass section:**\n   - \\( f_H = 4.209 \\, \\text{kHz} \\)\n   - Choose \\( R_{lp} = 10 \\, \\text{",
+        "generated_netlist": "* Band-pass filter with a passband from 205.7 Hz to 4.209 kHz\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    7.75n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   50k\nCL1  VOUT  0      7.56n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 274.25515661014845,
+          "cutoff_freq_low_error_pct": 33.327737778390116,
+          "cutoff_freq_high_hz_measured": 3152.7650488533445,
+          "cutoff_freq_high_error_pct": 25.094676910112984,
+          "passband_ripple_db": 4.6381,
+          "attenuation_at_fs_low": {
+            "fs_hz": 9.032,
+            "achieved_db": 30.42,
+            "required_db": 34.6,
+            "met": false
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2847000.0,
+            "achieved_db": 59.88,
+            "required_db": 34.6,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 5,
+        "generation_time_s": 20.45,
+        "tokens_generated": 679,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nFor a single-stage RC band-pass filter, we need to design a second-order filter (two poles) to meet the specified requirements.\n\n### Step 2 \u2014 Compute Component Values\nGiven the feedback that the current design still does not meet the specifications, we will further adjust the component values to achieve the desired cutoff frequencies.\n\n1. **Recalculate the component values for the high-pass section:**\n   - \\( f_L = 205.7 \\, \\text{Hz} \\)\n   - Choose \\( R_{hp} = 10 \\, \\text{k}\\Omega \\)\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 205.7 \\cdot 10000} \\approx 7.75 \\, \\text{nF} \\)\n\n2. **Recalculate the component values for the low-pass section:**\n   - \\( f_H = 4.209 \\, \\text{kHz} \\)\n   - Choose \\( R_{lp} = 10 \\, \\text{",
+        "generated_netlist": "* Band-pass filter with a passband from 205.7 Hz to 4.209 kHz\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    7.75n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   40k\nCL1  VOUT  0      9.45n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 266.27833488889536,
+          "cutoff_freq_low_error_pct": 29.449846810352636,
+          "cutoff_freq_high_hz_measured": 3247.226614356385,
+          "cutoff_freq_high_error_pct": 22.850401179463407,
+          "passband_ripple_db": 4.4412,
+          "attenuation_at_fs_low": {
+            "fs_hz": 9.032,
+            "achieved_db": 30.12,
+            "required_db": 34.6,
+            "met": false
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2847000.0,
+            "achieved_db": 59.58,
+            "required_db": 34.6,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      }
+    ],
+    "parse_success": true,
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_low_hz_measured": 266.27833488889536,
+      "cutoff_freq_low_error_pct": 29.449846810352636,
+      "cutoff_freq_high_hz_measured": 3247.226614356385,
+      "cutoff_freq_high_error_pct": 22.850401179463407,
+      "passband_ripple_db": 4.4412,
+      "attenuation_at_fs_low": {
+        "fs_hz": 9.032,
+        "achieved_db": 30.12,
+        "required_db": 34.6,
+        "met": false
+      },
+      "attenuation_at_fs_high": {
+        "fs_hz": 2847000.0,
+        "achieved_db": 59.58,
+        "required_db": 34.6,
+        "met": true
+      },
+      "filter_response_match": false
+    },
+    "generated_netlist": "* Band-pass filter with a passband from 205.7 Hz to 4.209 kHz\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    7.75n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   40k\nCL1  VOUT  0      9.45n\n.end",
+    "generation_time_s": 88.44,
+    "tokens_generated": 3235,
+    "final_spec_met": false,
+    "iterations_used": 5
+  },
+  {
+    "index": 1,
+    "task_type": "band_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_low_hz": 863.9,
+      "fc_high_hz": 5274.0,
+      "fs_low_hz": 13.83,
+      "fs_high_hz": 2761000.0,
+      "atten_low_db": 29.1,
+      "atten_high_db": 29.1,
+      "pb_loss_db": 4.2
+    },
+    "prompt": "A band-pass filter is required to isolate a narrowband signal of interest. It must pass signals between 864 Hz and 5.27 kHz with less than 4.2 dB attenuation while rejecting frequencies at 13.8 Hz and 2.76 MHz by at least 29.1 dB. The circuit must use only passive components and should be as low-cost as possible.\n\nREQUIREMENTS:\n  Type: band-pass filter\n  Lower passband edge (fc_low): 863.9 Hz  [max loss: 4.2 dB]\n  Upper passband edge (fc_high): 5.274 kHz  [max loss: 4.2 dB]\n  Lower stopband edge (fs_low): 13.83 Hz  [min attenuation: 29.1 dB]\n  Upper stopband edge (fs_high): 2.761 MHz  [min attenuation: 29.1 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN    NH1    69.2n\nRH1  NH1    0      5.22k\n\n* Low-pass section (sets upper cutoff)\nRL1  NH1    VOUT   4.03k\nCL1  VOUT   0      3.16n\n",
+    "rag_doc_used": "bpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 7.15,
+        "tokens_generated": 290,
+        "parse_success": true,
+        "cot_reasoning": "\u2550\u2550 STEP 1 \u2014 DETERMINE FILTER ORDER \u2550\u2550\nI need a 2nd-order band-pass filter.\n\n\u2550\u2550 STEP 2 \u2014 COMPUTE COMPONENT VALUES \u2550\u2550\nFor the high-pass section:\n- fc_low = 863.9 Hz\n- R_hp = 10 k\u03a9 (chosen within the range)\n- C_hp = 1 / (2\u03c0 * 863.9 * 10000) = 7.14 nF\n\nFor the low-pass section:\n- fc_high = 5.274 kHz\n- R_lp = 10 k\u03a9 (chosen within the range)\n- C_lp = 1 / (2\u03c0 * 5274 * 10000) = 3.02 nF\n\n\u2550\u2550 STEP 3 \u2014 WRITE THE NETLIST \u2550\u2550",
+        "generated_netlist": "* Single-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    7.14n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   10k\nCL1  VOUT  0      3.02n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 1088.3721220544296,
+          "cutoff_freq_low_error_pct": 25.983577040679435,
+          "cutoff_freq_high_hz_measured": 10793.324424135522,
+          "cutoff_freq_high_error_pct": 104.6515818000668,
+          "passband_ripple_db": 4.2714,
+          "attenuation_at_fs_low": {
+            "fs_hz": 13.83,
+            "achieved_db": 38.82,
+            "required_db": 29.1,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2761000.0,
+            "achieved_db": 49.06,
+            "required_db": 29.1,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 11.79,
+        "tokens_generated": 466,
+        "parse_success": true,
+        "cot_reasoning": "Based on the feedback, the current filter is not meeting the specified cutoff frequencies. We need to adjust the resistor and capacitor values to achieve the desired lower and upper cutoff frequencies.\n\nLet's recalculate the component values:\n\nFor the high-pass section:\n- fc_low = 863.9 Hz\n- R_hp = 10 k\u03a9 (unchanged)\n- C_hp = 1 / (2\u03c0 * 863.9 * 10000) = 7.14 nF (unchanged)\n\nFor the low-pass section:\n- fc_high = 5.274 kHz\n- R_lp = 10 k\u03a9 (unchanged)\n- C_lp = 1 / (2\u03c0 * 5274 * 10000) = 3.02 nF (unchanged)\n\nSince the calculated values are already within the specified range and the previous iteration did not meet the requirements, let's try adjusting the resistors to see if we can get closer to the target frequencies.\n\nLet's try reducing R_hp and R_lp slightly to increase the cutoff frequencies:\n\n",
+        "generated_netlist": "* Revised single-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    8.53n\nRH1  nh1   0      8k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   8k\nCL1  VOUT  0      3.77n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 1115.480245027408,
+          "cutoff_freq_low_error_pct": 29.12145445391921,
+          "cutoff_freq_high_hz_measured": 11033.35722370312,
+          "cutoff_freq_high_error_pct": 109.20282942175048,
+          "passband_ripple_db": 4.4255,
+          "attenuation_at_fs_low": {
+            "fs_hz": 13.83,
+            "achieved_db": 39.04,
+            "required_db": 29.1,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2761000.0,
+            "achieved_db": 48.87,
+            "required_db": 29.1,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 3,
+        "generation_time_s": 6.35,
+        "tokens_generated": 236,
+        "parse_success": true,
+        "cot_reasoning": "Given that the previous adjustments have worsened the performance, let's revert to the original component values and consider a different approach. One potential issue could be the interaction between the high-pass and low-pass sections due to loading effects. To mitigate this, we can introduce a buffer between the two sections to isolate them.\n\nHere\u2019s the revised netlist with a buffer:",
+        "generated_netlist": "* Single-stage passive RC band-pass filter with buffer\nV1   VIN   0     AC 1\n\n* Buffer (unity-gain voltage follower)\nEBUF  nbuf  0     VIN  0  1\n\n* High-pass section (sets lower cutoff)\nCH1  nbuf   nh1    7.14n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   10k\nCL1  VOUT  0      3.02n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 1088.3721220544296,
+          "cutoff_freq_low_error_pct": 25.983577040679435,
+          "cutoff_freq_high_hz_measured": 10793.324424135522,
+          "cutoff_freq_high_error_pct": 104.6515818000668,
+          "passband_ripple_db": 4.2714,
+          "attenuation_at_fs_low": {
+            "fs_hz": 13.83,
+            "achieved_db": 38.82,
+            "required_db": 29.1,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2761000.0,
+            "achieved_db": 49.06,
+            "required_db": 29.1,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 4,
+        "generation_time_s": 12.69,
+        "tokens_generated": 467,
+        "parse_success": true,
+        "cot_reasoning": "Since the buffer helped improve the performance but the cutoff frequencies are still not meeting the specifications, let's further refine the component values. We will try to adjust the resistors and capacitors more precisely to get closer to the target frequencies.\n\nLet's recalculate the component values again:\n\nFor the high-pass section:\n- fc_low = 863.9 Hz\n- R_hp = 10 k\u03a9\n- C_hp = 1 / (2\u03c0 * 863.9 * 10000) = 7.14 nF\n\nFor the low-pass section:\n- fc_high = 5.274 kHz\n- R_lp = 10 k\u03a9\n- C_lp = 1 / (2\u03c0 * 5274 * 10000) = 3.02 nF\n\nWe will try slightly different values to see if we can get closer to the target frequencies:\n\nFor the high-pass section:\n- fc_low = 863.9 Hz\n- R_hp = 9.5 k\u03a9\n- C_hp = 1 / (2\u03c0 * 863.9 * 9500) = 7.52 nF\n\nFor the low-pass section:\n- fc_high = 5.274 kHz\n- R_lp = 9.5 k\u03a9\n- C_lp",
+        "generated_netlist": "* Revised single-stage passive RC band-pass filter with buffer\nV1   VIN   0     AC 1\n\n* Buffer (unity-gain voltage follower)\nEBUF  nbuf  0     VIN  0  1\n\n* High-pass section (sets lower cutoff)\nCH1  nbuf   nh1    7.52n\nRH1  nh1   0      9.5k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   9.5k\nCL1  VOUT  0      3.20n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 1084.6875055430316,
+          "cutoff_freq_low_error_pct": 25.5570674317666,
+          "cutoff_freq_high_hz_measured": 10752.78043887646,
+          "cutoff_freq_high_error_pct": 103.88282970945126,
+          "passband_ripple_db": 4.2506,
+          "attenuation_at_fs_low": {
+            "fs_hz": 13.83,
+            "achieved_db": 38.79,
+            "required_db": 29.1,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2761000.0,
+            "achieved_db": 49.09,
+            "required_db": 29.1,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 5,
+        "generation_time_s": 9.14,
+        "tokens_generated": 320,
+        "parse_success": true,
+        "cot_reasoning": "Given that the previous adjustments did not significantly improve the performance, let's try a more substantial adjustment to the component values. We will increase the resistance values slightly to see if we can get closer to the target frequencies.\n\nLet's recalculate the component values again:\n\nFor the high-pass section:\n- fc_low = 863.9 Hz\n- R_hp = 11 k\u03a9\n- C_hp = 1 / (2\u03c0 * 863.9 * 11000) = 6.91 nF\n\nFor the low-pass section:\n- fc_high = 5.274 kHz\n- R_lp = 11 k\u03a9\n- C_lp = 1 / (2\u03c0 * 5274 * 11000) = 2.89 nF\n\nNow, let's write the revised netlist:",
+        "generated_netlist": "* Revised single-stage passive RC band-pass filter with buffer\nV1   VIN   0     AC 1\n\n* Buffer (unity-gain voltage follower)\nEBUF  nbuf  0     VIN  0  1\n\n* High-pass section (sets lower cutoff)\nCH1  nbuf   nh1    6.91n\nRH1  nh1   0      11k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   11k\nCL1  VOUT  0      2.89n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 1027.7272106347662,
+          "cutoff_freq_low_error_pct": 18.963677582447758,
+          "cutoff_freq_high_hz_measured": 10199.97057939509,
+          "cutoff_freq_high_error_pct": 93.4010348766608,
+          "passband_ripple_db": 3.9224,
+          "attenuation_at_fs_low": {
+            "fs_hz": 13.83,
+            "achieved_db": 38.32,
+            "required_db": 29.1,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 2761000.0,
+            "achieved_db": 49.55,
+            "required_db": 29.1,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      }
+    ],
+    "parse_success": true,
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_low_hz_measured": 1027.7272106347662,
+      "cutoff_freq_low_error_pct": 18.963677582447758,
+      "cutoff_freq_high_hz_measured": 10199.97057939509,
+      "cutoff_freq_high_error_pct": 93.4010348766608,
+      "passband_ripple_db": 3.9224,
+      "attenuation_at_fs_low": {
+        "fs_hz": 13.83,
+        "achieved_db": 38.32,
+        "required_db": 29.1,
+        "met": true
+      },
+      "attenuation_at_fs_high": {
+        "fs_hz": 2761000.0,
+        "achieved_db": 49.55,
+        "required_db": 29.1,
+        "met": true
+      },
+      "filter_response_match": false
+    },
+    "generated_netlist": "* Revised single-stage passive RC band-pass filter with buffer\nV1   VIN   0     AC 1\n\n* Buffer (unity-gain voltage follower)\nEBUF  nbuf  0     VIN  0  1\n\n* High-pass section (sets lower cutoff)\nCH1  nbuf   nh1    6.91n\nRH1  nh1   0      11k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   11k\nCL1  VOUT  0      2.89n\n.end",
+    "generation_time_s": 47.12,
+    "tokens_generated": 1779,
+    "final_spec_met": false,
+    "iterations_used": 5
+  },
+  {
+    "index": 2,
+    "task_type": "band_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_low_hz": 542.7,
+      "fc_high_hz": 5436.0,
+      "fs_low_hz": 5.694,
+      "fs_high_hz": 1693000.0,
+      "atten_low_db": 37.9,
+      "atten_high_db": 37.9,
+      "pb_loss_db": 4.2
+    },
+    "prompt": "A band-pass RC filter is required for a data acquisition front end. Signals between 543 Hz and 5.44 kHz should experience at most 4.2 dB of loss. Signals at or below 5.69 Hz and at or above 1.69 MHz should be attenuated by no less than 37.9 dB. The solution must be purely passive and as inexpensive as possible.\n\nREQUIREMENTS:\n  Type: band-pass filter\n  Lower passband edge (fc_low): 542.7 Hz  [max loss: 4.2 dB]\n  Upper passband edge (fc_high): 5.436 kHz  [max loss: 4.2 dB]\n  Lower stopband edge (fs_low): 5.694 Hz  [min attenuation: 37.9 dB]\n  Upper stopband edge (fs_high): 1.693 MHz  [min attenuation: 37.9 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN    NH1    35.8n\nRH1  NH1    0      8.82k\n\n* Low-pass section (sets upper cutoff)\nRL1  NH1    VOUT   2.06k\nCL1  VOUT   0      6.72n\n",
+    "rag_doc_used": "bpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 10.99,
+        "tokens_generated": 448,
+        "parse_success": true,
+        "cot_reasoning": "\u2550\u2550 STEP 1 \u2014 DETERMINE FILTER ORDER \u2550\u2550\nI need a 2nd-order band-pass filter.\n\n\u2550\u2550 STEP 2 \u2014 COMPUTE COMPONENT VALUES \u2550\u2550\nFirst, calculate the component values for the high-pass section (sets the lower cutoff):\n\n1. For the high-pass section:\n   - \\( f_L = 542.7 \\) Hz\n   - Choose \\( R_{hp} = 10 \\) k\u03a9\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 542.7 \\cdot 10000} \\approx 30.03 \\) nF\n\n2. For the low-pass section:\n   - \\( f_H = 5.436 \\) kHz\n   - Choose \\( R_{lp} = 10 \\) k\u03a9\n   - Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 5436 \\cdot 10000} \\approx 30.03 \\) nF\n\nBoth \\( C_{hp} \\) and \\( C_{lp} \\) fall within the acceptable range of 1 nF to 100 nF, and \\( R_{lp} \\) is equal to \\( R_{hp} \\), which is acceptable for this desi",
+        "generated_netlist": "* Two-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    30.03n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   10k\nCL1  VOUT  0      30.03n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 160.78285787799018,
+          "cutoff_freq_low_error_pct": 70.37352904404088,
+          "cutoff_freq_high_hz_measured": 1746.9880632085262,
+          "cutoff_freq_high_error_pct": 67.86261841043918,
+          "passband_ripple_db": 10.8972,
+          "attenuation_at_fs_low": {
+            "fs_hz": 5.694,
+            "achieved_db": 29.84,
+            "required_db": 37.9,
+            "met": false
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 1693000.0,
+            "achieved_db": 60.55,
+            "required_db": 37.9,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 15.85,
+        "tokens_generated": 621,
+        "parse_success": true,
+        "cot_reasoning": "Based on the feedback, the current component values result in lower cutoff frequencies than required. To achieve the desired cutoff frequencies, we need to adjust the resistor and capacitor values accordingly.\n\nLet's recalculate the component values:\n\n1. For the high-pass section:\n   - \\( f_L = 542.7 \\) Hz\n   - Choose \\( R_{hp} = 10 \\) k\u03a9\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 542.7 \\cdot 10000} \\approx 30.03 \\) nF\n\n2. For the low-pass section:\n   - \\( f_H = 5.436 \\) kHz\n   - Choose \\( R_{lp} = 10 \\) k\u03a9\n   - Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 5436 \\cdot 10000} \\approx 30.03 \\) nF\n\nSince the initial calculations were correct but the simulation results did not meet the specifications, let's try adj",
+        "generated_netlist": "* Two-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    3.003n\nRH1  nh1   0      100k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   100k\nCL1  VOUT  0      3.003n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 160.78285787799018,
+          "cutoff_freq_low_error_pct": 70.37352904404088,
+          "cutoff_freq_high_hz_measured": 1746.9880632085262,
+          "cutoff_freq_high_error_pct": 67.86261841043918,
+          "passband_ripple_db": 10.8972,
+          "attenuation_at_fs_low": {
+            "fs_hz": 5.694,
+            "achieved_db": 29.84,
+            "required_db": 37.9,
+            "met": false
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 1693000.0,
+            "achieved_db": 60.55,
+            "required_db": 37.9,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 3,
+        "generation_time_s": 10.05,
+        "tokens_generated": 371,
+        "parse_success": true,
+        "cot_reasoning": "Given that the previous adjustments did not meet the specifications, let's further increase the resistor values to achieve the desired cutoff frequencies.\n\n1. For the high-pass section:\n   - \\( f_L = 542.7 \\) Hz\n   - Choose \\( R_{hp} = 1000 \\) k\u03a9\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 542.7 \\cdot 1000000} \\approx 0.3003 \\) nF\n\n2. For the low-pass section:\n   - \\( f_H = 5.436 \\) kHz\n   - Choose \\( R_{lp} = 1000 \\) k\u03a9\n   - Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 5436 \\cdot 1000000} \\approx 0.3003 \\) nF\n\nNow, let's write the revised netlist:",
+        "generated_netlist": "* Two-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    0.3003n\nRH1  nh1   0      1000k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   1000k\nCL1  VOUT  0      0.3003n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 160.78285787799018,
+          "cutoff_freq_low_error_pct": 70.37352904404088,
+          "cutoff_freq_high_hz_measured": 1746.9880632085262,
+          "cutoff_freq_high_error_pct": 67.86261841043918,
+          "passband_ripple_db": 10.8972,
+          "attenuation_at_fs_low": {
+            "fs_hz": 5.694,
+            "achieved_db": 29.84,
+            "required_db": 37.9,
+            "met": false
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 1693000.0,
+            "achieved_db": 60.55,
+            "required_db": 37.9,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 4,
+        "generation_time_s": 17.1,
+        "tokens_generated": 613,
+        "parse_success": true,
+        "cot_reasoning": "It appears that increasing the resistor values further is still not achieving the desired cutoff frequencies. Let's take a different approach by recalculating the component values more precisely and ensuring they meet the required specifications.\n\n1. For the high-pass section:\n   - \\( f_L = 542.7 \\) Hz\n   - Choose \\( R_{hp} = 100 \\) k\u03a9\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 542.7 \\cdot 100000} \\approx 3.003 \\) nF\n\n2. For the low-pass section:\n   - \\( f_H = 5.436 \\) kHz\n   - Choose \\( R_{lp} = 100 \\) k\u03a9\n   - Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 5436 \\cdot 100000} \\approx 3.003 \\) nF\n\nLet's try a different combination of resistor and capacitor values to ensure the required cutoff frequencies are met:",
+        "generated_netlist": "* Two-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    3.003n\nRH1  nh1   0      100k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   100k\nCL1  VOUT  0      3.003n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 160.78285787799018,
+          "cutoff_freq_low_error_pct": 70.37352904404088,
+          "cutoff_freq_high_hz_measured": 1746.9880632085262,
+          "cutoff_freq_high_error_pct": 67.86261841043918,
+          "passband_ripple_db": 10.8972,
+          "attenuation_at_fs_low": {
+            "fs_hz": 5.694,
+            "achieved_db": 29.84,
+            "required_db": 37.9,
+            "met": false
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 1693000.0,
+            "achieved_db": 60.55,
+            "required_db": 37.9,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 5,
+        "generation_time_s": 17.81,
+        "tokens_generated": 607,
+        "parse_success": true,
+        "cot_reasoning": "Given that the previous adjustments did not meet the specifications, let's try a different approach by recalculating the component values more precisely and ensuring they meet the required specifications.\n\n1. For the high-pass section:\n   - \\( f_L = 542.7 \\) Hz\n   - Choose \\( R_{hp} = 100 \\) k\u03a9\n   - Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 542.7 \\cdot 100000} \\approx 3.003 \\) nF\n\n2. For the low-pass section:\n   - \\( f_H = 5.436 \\) kHz\n   - Choose \\( R_{lp} = 100 \\) k\u03a9\n   - Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 5436 \\cdot 100000} \\approx 3.003 \\) nF\n\nLet's try a different combination of resistor and capacitor values to ensure the required cutoff frequencies are met:\n\n1. For the high-pass section:\n   - \\( f_",
+        "generated_netlist": "* Two-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    3.003n\nRH1  nh1   0      100k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   100k\nCL1  VOUT  0      3.003n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 160.78285787799018,
+          "cutoff_freq_low_error_pct": 70.37352904404088,
+          "cutoff_freq_high_hz_measured": 1746.9880632085262,
+          "cutoff_freq_high_error_pct": 67.86261841043918,
+          "passband_ripple_db": 10.8972,
+          "attenuation_at_fs_low": {
+            "fs_hz": 5.694,
+            "achieved_db": 29.84,
+            "required_db": 37.9,
+            "met": false
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 1693000.0,
+            "achieved_db": 60.55,
+            "required_db": 37.9,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      }
+    ],
+    "parse_success": true,
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_low_hz_measured": 160.78285787799018,
+      "cutoff_freq_low_error_pct": 70.37352904404088,
+      "cutoff_freq_high_hz_measured": 1746.9880632085262,
+      "cutoff_freq_high_error_pct": 67.86261841043918,
+      "passband_ripple_db": 10.8972,
+      "attenuation_at_fs_low": {
+        "fs_hz": 5.694,
+        "achieved_db": 29.84,
+        "required_db": 37.9,
+        "met": false
+      },
+      "attenuation_at_fs_high": {
+        "fs_hz": 1693000.0,
+        "achieved_db": 60.55,
+        "required_db": 37.9,
+        "met": true
+      },
+      "filter_response_match": false
+    },
+    "generated_netlist": "* Two-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    3.003n\nRH1  nh1   0      100k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   100k\nCL1  VOUT  0      3.003n\n.end",
+    "generation_time_s": 71.8,
+    "tokens_generated": 2660,
+    "final_spec_met": false,
+    "iterations_used": 5
+  },
+  {
+    "index": 3,
+    "task_type": "band_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_low_hz": 73.58,
+      "fc_high_hz": 879.8,
+      "fs_low_hz": 0.1902,
+      "fs_high_hz": 89920.0,
+      "atten_low_db": 40.4,
+      "atten_high_db": 40.4,
+      "pb_loss_db": 11.8
+    },
+    "prompt": "Specify a band-pass RC network to isolate a narrow frequency band from a measurement line. Frequencies from 73.6 Hz to 880 Hz must be passed with <= 11.8 dB loss. The attenuation at 0.19 Hz and 89.9 kHz must be >= 40.4 dB. The design should use the fewest passive components that satisfy these requirements.\n\nREQUIREMENTS:\n  Type: band-pass filter\n  Lower passband edge (fc_low): 73.58 Hz  [max loss: 11.8 dB]\n  Upper passband edge (fc_high): 879.8 Hz  [max loss: 11.8 dB]\n  Lower stopband edge (fs_low): 0.1902 Hz  [min attenuation: 40.4 dB]\n  Upper stopband edge (fs_high): 89.92 kHz  [min attenuation: 40.4 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN    NH1    17.9n\nRH1  NH1    0      52.4k\n\n* Low-pass section (sets upper cutoff)\nRL1  NH1    VOUT   7.56k\nCL1  VOUT   0      27.4n\n",
+    "rag_doc_used": "bpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 9.98,
+        "tokens_generated": 407,
+        "parse_success": true,
+        "cot_reasoning": "\u2550\u2550 STEP 1 \u2014 DETERMINE FILTER ORDER \u2550\u2550\nI need a 2nd-order band-pass filter.\n\n\u2550\u2550 STEP 2 \u2014 COMPUTE COMPONENT VALUES \u2550\u2550\nFirst, calculate the component values for the high-pass section:\n\nFor the high-pass section:\n- \\( f_L = 73.58 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 10 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 73.58 \\cdot 10000} \\approx 20.2 \\, \\text{nF} \\)\n\nNext, calculate the component values for the low-pass section:\n\nFor the low-pass section:\n- \\( f_H = 879.8 \\, \\text{Hz} \\)\n- Choose \\( R_{lp} = 10 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 879.8 \\cdot 10000} \\approx 7.1 \\, \\text{nF} \\)\n\n\u2550\u2550 STEP 3 \u2014 WRITE THE NETLIST \u2550\u2550",
+        "generated_netlist": "* Band-pass filter, single-stage RC\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    20.2n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   10k\nCL1  VOUT  0      7.1n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 417.9038896574999,
+          "cutoff_freq_low_error_pct": 467.9585344624897,
+          "cutoff_freq_high_hz_measured": 4226.226230831148,
+          "cutoff_freq_high_error_pct": 380.36215399308344,
+          "passband_ripple_db": 15.5836,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.1902,
+            "achieved_db": 67.72,
+            "required_db": 40.4,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 89920.0,
+            "achieved_db": 27.45,
+            "required_db": 40.4,
+            "met": false
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 16.39,
+        "tokens_generated": 645,
+        "parse_success": true,
+        "cot_reasoning": "Based on the feedback, the current component values result in cutoff frequencies that are too high. We need to adjust the resistor and capacitor values to meet the specified cutoff frequencies.\n\nLet's recalculate the component values:\n\nFor the high-pass section:\n- \\( f_L = 73.58 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 10 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 73.58 \\cdot 10000} \\approx 20.2 \\, \\text{nF} \\)\n\nFor the low-pass section:\n- \\( f_H = 879.8 \\, \\text{Hz} \\)\n- Choose \\( R_{lp} = 10 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 879.8 \\cdot 10000} \\approx 7.1 \\, \\text{nF} \\)\n\nSince the calculated values are already used and resulted in incorrect cutoff frequencies, let's try",
+        "generated_netlist": "* Band-pass filter, single-stage RC\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    10.1n\nRH1  nh1   0      20k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   20k\nCL1  VOUT  0      3.55n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 417.9038896574999,
+          "cutoff_freq_low_error_pct": 467.9585344624897,
+          "cutoff_freq_high_hz_measured": 4226.226230831148,
+          "cutoff_freq_high_error_pct": 380.36215399308344,
+          "passband_ripple_db": 15.5836,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.1902,
+            "achieved_db": 67.72,
+            "required_db": 40.4,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 89920.0,
+            "achieved_db": 27.45,
+            "required_db": 40.4,
+            "met": false
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 3,
+        "generation_time_s": 10.52,
+        "tokens_generated": 390,
+        "parse_success": true,
+        "cot_reasoning": "Given that the previous adjustments did not meet the specifications, we need to make more significant changes to the resistor and capacitor values. Let's try increasing the resistor values further while ensuring the capacitor values remain within the specified range.\n\nFor the high-pass section:\n- \\( f_L = 73.58 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 30 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 73.58 \\cdot 30000} \\approx 6.73 \\, \\text{nF} \\)\n\nFor the low-pass section:\n- \\( f_H = 879.8 \\, \\text{Hz} \\)\n- Choose \\( R_{lp} = 30 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 879.8 \\cdot 30000} \\approx 2.37 \\, \\text{nF} \\)\n\nNow, let's update the netlist with these new values:",
+        "generated_netlist": "* Band-pass filter, single-stage RC\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    6.73n\nRH1  nh1   0      30k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   30k\nCL1  VOUT  0      2.37n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 417.77080383151315,
+          "cutoff_freq_low_error_pct": 467.7776621792786,
+          "cutoff_freq_high_hz_measured": 4223.717133087906,
+          "cutoff_freq_high_error_pct": 380.0769644337243,
+          "passband_ripple_db": 15.5818,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.1902,
+            "achieved_db": 67.72,
+            "required_db": 40.4,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 89920.0,
+            "achieved_db": 27.45,
+            "required_db": 40.4,
+            "met": false
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 4,
+        "generation_time_s": 17.8,
+        "tokens_generated": 640,
+        "parse_success": true,
+        "cot_reasoning": "It appears that increasing the resistor values further is not helping to meet the specifications. Let's try a different approach by adjusting the capacitor values instead, while keeping the resistor values within the specified range.\n\nFor the high-pass section:\n- \\( f_L = 73.58 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 10 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 73.58 \\cdot 10000} \\approx 20.2 \\, \\text{nF} \\)\n\nFor the low-pass section:\n- \\( f_H = 879.8 \\, \\text{Hz} \\)\n- Choose \\( R_{lp} = 10 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 879.8 \\cdot 10000} \\approx 7.1 \\, \\text{nF} \\)\n\nSince the previous values were already used and resulted in incorrect cutoff frequencies, let's try d",
+        "generated_netlist": "* Band-pass filter, single-stage RC\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    20.2n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   10k\nCL1  VOUT  0      7.1n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 417.9038896574999,
+          "cutoff_freq_low_error_pct": 467.9585344624897,
+          "cutoff_freq_high_hz_measured": 4226.226230831148,
+          "cutoff_freq_high_error_pct": 380.36215399308344,
+          "passband_ripple_db": 15.5836,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.1902,
+            "achieved_db": 67.72,
+            "required_db": 40.4,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 89920.0,
+            "achieved_db": 27.45,
+            "required_db": 40.4,
+            "met": false
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 5,
+        "generation_time_s": 11.48,
+        "tokens_generated": 388,
+        "parse_success": true,
+        "cot_reasoning": "Given that the previous adjustments did not meet the specifications, let's try a different approach by using a different combination of resistor and capacitor values. We will increase the resistor values significantly and adjust the capacitors accordingly.\n\nFor the high-pass section:\n- \\( f_L = 73.58 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 50 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 73.58 \\cdot 50000} \\approx 4.04 \\, \\text{nF} \\)\n\nFor the low-pass section:\n- \\( f_H = 879.8 \\, \\text{Hz} \\)\n- Choose \\( R_{lp} = 50 \\, \\text{k\u03a9} \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 879.8 \\cdot 50000} \\approx 1.43 \\, \\text{nF} \\)\n\nNow, let's update the netlist with these new values:",
+        "generated_netlist": "* Band-pass filter, single-stage RC\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    4.04n\nRH1  nh1   0      50k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   50k\nCL1  VOUT  0      1.43n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 416.6507967335891,
+          "cutoff_freq_low_error_pct": 466.25549977383685,
+          "cutoff_freq_high_hz_measured": 4209.311260179794,
+          "cutoff_freq_high_error_pct": 378.4395612843594,
+          "passband_ripple_db": 15.5647,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.1902,
+            "achieved_db": 67.7,
+            "required_db": 40.4,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 89920.0,
+            "achieved_db": 27.48,
+            "required_db": 40.4,
+            "met": false
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      }
+    ],
+    "parse_success": true,
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_low_hz_measured": 416.6507967335891,
+      "cutoff_freq_low_error_pct": 466.25549977383685,
+      "cutoff_freq_high_hz_measured": 4209.311260179794,
+      "cutoff_freq_high_error_pct": 378.4395612843594,
+      "passband_ripple_db": 15.5647,
+      "attenuation_at_fs_low": {
+        "fs_hz": 0.1902,
+        "achieved_db": 67.7,
+        "required_db": 40.4,
+        "met": true
+      },
+      "attenuation_at_fs_high": {
+        "fs_hz": 89920.0,
+        "achieved_db": 27.48,
+        "required_db": 40.4,
+        "met": false
+      },
+      "filter_response_match": false
+    },
+    "generated_netlist": "* Band-pass filter, single-stage RC\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    4.04n\nRH1  nh1   0      50k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   50k\nCL1  VOUT  0      1.43n\n.end",
+    "generation_time_s": 66.16,
+    "tokens_generated": 2470,
+    "final_spec_met": false,
+    "iterations_used": 5
+  },
+  {
+    "index": 4,
+    "task_type": "band_pass_filter",
+    "topology": "rc_single",
+    "params": {
+      "fc_low_hz": 121.4,
+      "fc_high_hz": 3989.0,
+      "fs_low_hz": 0.3412,
+      "fs_high_hz": 447100.0,
+      "atten_low_db": 32.3,
+      "atten_high_db": 32.3,
+      "pb_loss_db": 2.4
+    },
+    "prompt": "Provide a band-pass filter design for a general-purpose noise-reduction application. The passband should span 121 Hz to 3.99 kHz with no more than 2.4 dB loss. At 0.341 Hz and 447 kHz the filter must deliver >= 32.3 dB of attenuation. No active components; keep the design as simple and cheap as possible.\n\nREQUIREMENTS:\n  Type: band-pass filter\n  Lower passband edge (fc_low): 121.4 Hz  [max loss: 2.4 dB]\n  Upper passband edge (fc_high): 3.989 kHz  [max loss: 2.4 dB]\n  Lower stopband edge (fs_low): 0.3412 Hz  [min attenuation: 32.3 dB]\n  Upper stopband edge (fs_high): 447.1 kHz  [min attenuation: 32.3 dB]",
+    "ground_truth_netlist": "* Single-stage passive RC band-pass filter\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN    NH1    82.1n\nRH1  NH1    0      37.1k\n\n* Low-pass section (sets upper cutoff)\nRL1  NH1    VOUT   2.24k\nCL1  VOUT   0      7.32n\n",
+    "rag_doc_used": "bpf_rc_single.md",
+    "iterations": [
+      {
+        "iteration": 1,
+        "generation_time_s": 9.08,
+        "tokens_generated": 370,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nI need a 2nd-order band-pass filter.\n\n### Step 2 \u2014 Compute Component Values\n#### High-pass section:\n- \\( f_L = 121.4 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 10 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 121.4 \\cdot 10000} \\approx 13.03 \\, \\text{nF} \\)\n\n#### Low-pass section:\n- \\( f_H = 3.989 \\, \\text{kHz} \\)\n- Choose \\( R_{lp} = 10 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 3989 \\cdot 10000} \\approx 3.95 \\, \\text{nF} \\)\n\n### Step 3 \u2014 Write the Netlist",
+        "generated_netlist": "* Band-pass filter for noise reduction\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    13.03n\nRH1  nh1   0      10k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   10k\nCL1  VOUT  0      3.95n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 688.7613279122154,
+          "cutoff_freq_low_error_pct": 467.34870503477384,
+          "cutoff_freq_high_hz_measured": 7145.480497361714,
+          "cutoff_freq_high_error_pct": 79.1296188859793,
+          "passband_ripple_db": 16.0019,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.3412,
+            "achieved_db": 66.96,
+            "required_db": 32.3,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 447100.0,
+            "achieved_db": 36.79,
+            "required_db": 32.3,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 2,
+        "generation_time_s": 16.51,
+        "tokens_generated": 651,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nI need a 2nd-order band-pass filter.\n\n### Step 2 \u2014 Compute Component Values\nGiven the feedback that the current design does not meet the specifications, we need to adjust the component values to achieve the desired cutoff frequencies.\n\n#### High-pass section:\n- \\( f_L = 121.4 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 10 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 121.4 \\cdot 10000} \\approx 13.03 \\, \\text{nF} \\)\n\n#### Low-pass section:\n- \\( f_H = 3.989 \\, \\text{kHz} \\)\n- Choose \\( R_{lp} = 10 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 3989 \\cdot 10000} \\approx 3.95 \\, \\text{nF} \\)\n\nSince the initial values did not meet the specifications, ",
+        "generated_netlist": "* Revised band-pass filter for noise reduction\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    6.51n\nRH1  nh1   0      20k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   20k\nCL1  VOUT  0      1.98n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 688.3845151336149,
+          "cutoff_freq_low_error_pct": 467.03831559605834,
+          "cutoff_freq_high_hz_measured": 7136.800025329303,
+          "cutoff_freq_high_error_pct": 78.91200865703944,
+          "passband_ripple_db": 15.9978,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.3412,
+            "achieved_db": 66.96,
+            "required_db": 32.3,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 447100.0,
+            "achieved_db": 36.8,
+            "required_db": 32.3,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 3,
+        "generation_time_s": 10.61,
+        "tokens_generated": 394,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nI need a 2nd-order band-pass filter.\n\n### Step 2 \u2014 Compute Component Values\nGiven the continued issues with the previous iterations, let's further adjust the component values to achieve the desired cutoff frequencies.\n\n#### High-pass section:\n- \\( f_L = 121.4 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 30 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 121.4 \\cdot 30000} \\approx 4.34 \\, \\text{nF} \\)\n\n#### Low-pass section:\n- \\( f_H = 3.989 \\, \\text{kHz} \\)\n- Choose \\( R_{lp} = 30 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 3989 \\cdot 30000} \\approx 1.32 \\, \\text{nF} \\)\n\n### Step 3 \u2014 Write the Revised Netlist",
+        "generated_netlist": "* Further revised band-pass filter for noise reduction\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    4.34n\nRH1  nh1   0      30k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   30k\nCL1  VOUT  0      1.32n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 688.3845151336149,
+          "cutoff_freq_low_error_pct": 467.03831559605834,
+          "cutoff_freq_high_hz_measured": 7136.800025329303,
+          "cutoff_freq_high_error_pct": 78.91200865703944,
+          "passband_ripple_db": 15.9978,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.3412,
+            "achieved_db": 66.96,
+            "required_db": 32.3,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 447100.0,
+            "achieved_db": 36.8,
+            "required_db": 32.3,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 4,
+        "generation_time_s": 11.02,
+        "tokens_generated": 394,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nI need a 2nd-order band-pass filter.\n\n### Step 2 \u2014 Compute Component Values\nGiven the continued issues, let's make a more significant adjustment to the component values to achieve the desired cutoff frequencies.\n\n#### High-pass section:\n- \\( f_L = 121.4 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 50 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 121.4 \\cdot 50000} \\approx 2.57 \\, \\text{nF} \\)\n\n#### Low-pass section:\n- \\( f_H = 3.989 \\, \\text{kHz} \\)\n- Choose \\( R_{lp} = 50 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 3989 \\cdot 50000} \\approx 0.81 \\, \\text{nF} \\)\n\n### Step 3 \u2014 Write the Revised Netlist",
+        "generated_netlist": "* Further revised band-pass filter for noise reduction\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    2.57n\nRH1  nh1   0      50k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   50k\nCL1  VOUT  0      0.81n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 687.5440737487675,
+          "cutoff_freq_low_error_pct": 466.3460245047508,
+          "cutoff_freq_high_hz_measured": 7079.232731341302,
+          "cutoff_freq_high_error_pct": 77.46885764204818,
+          "passband_ripple_db": 15.9935,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.3412,
+            "achieved_db": 66.95,
+            "required_db": 32.3,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 447100.0,
+            "achieved_db": 36.88,
+            "required_db": 32.3,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      },
+      {
+        "iteration": 5,
+        "generation_time_s": 11.57,
+        "tokens_generated": 399,
+        "parse_success": true,
+        "cot_reasoning": "### Step 1 \u2014 Determine Filter Order\nI need a 2nd-order band-pass filter.\n\n### Step 2 \u2014 Compute Component Values\nGiven the continued issues, let's make another significant adjustment to the component values to achieve the desired cutoff frequencies.\n\n#### High-pass section:\n- \\( f_L = 121.4 \\, \\text{Hz} \\)\n- Choose \\( R_{hp} = 100 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{hp} = \\frac{1}{2\\pi \\cdot f_L \\cdot R_{hp}} = \\frac{1}{2\\pi \\cdot 121.4 \\cdot 100000} \\approx 1.28 \\, \\text{nF} \\)\n\n#### Low-pass section:\n- \\( f_H = 3.989 \\, \\text{kHz} \\)\n- Choose \\( R_{lp} = 100 \\, \\text{k}\\Omega \\)\n- Calculate \\( C_{lp} = \\frac{1}{2\\pi \\cdot f_H \\cdot R_{lp}} = \\frac{1}{2\\pi \\cdot 3989 \\cdot 100000} \\approx 0.40 \\, \\text{nF} \\)\n\n### Step 3 \u2014 Write the Revised Netlist",
+        "generated_netlist": "* Further revised band-pass filter for noise reduction\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    1.28n\nRH1  nh1   0      100k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   100k\nCL1  VOUT  0      0.40n\n.end",
+        "simulation_converged": true,
+        "metrics": {
+          "cutoff_freq_low_hz_measured": 692.6126851568779,
+          "cutoff_freq_low_error_pct": 470.52115746036066,
+          "cutoff_freq_high_hz_measured": 7142.930422613573,
+          "cutoff_freq_high_error_pct": 79.06569121618382,
+          "passband_ripple_db": 16.0547,
+          "attenuation_at_fs_low": {
+            "fs_hz": 0.3412,
+            "achieved_db": 67.01,
+            "required_db": 32.3,
+            "met": true
+          },
+          "attenuation_at_fs_high": {
+            "fs_hz": 447100.0,
+            "achieved_db": 36.8,
+            "required_db": 32.3,
+            "met": true
+          },
+          "filter_response_match": false
+        },
+        "spec_met": false
+      }
+    ],
+    "parse_success": true,
+    "simulation_converged": true,
+    "metrics": {
+      "cutoff_freq_low_hz_measured": 692.6126851568779,
+      "cutoff_freq_low_error_pct": 470.52115746036066,
+      "cutoff_freq_high_hz_measured": 7142.930422613573,
+      "cutoff_freq_high_error_pct": 79.06569121618382,
+      "passband_ripple_db": 16.0547,
+      "attenuation_at_fs_low": {
+        "fs_hz": 0.3412,
+        "achieved_db": 67.01,
+        "required_db": 32.3,
+        "met": true
+      },
+      "attenuation_at_fs_high": {
+        "fs_hz": 447100.0,
+        "achieved_db": 36.8,
+        "required_db": 32.3,
+        "met": true
+      },
+      "filter_response_match": false
+    },
+    "generated_netlist": "* Further revised band-pass filter for noise reduction\nV1   VIN   0     AC 1\n\n* High-pass section (sets lower cutoff)\nCH1  VIN   nh1    1.28n\nRH1  nh1   0      100k\n\n* Low-pass section (sets upper cutoff)\nRL1  nh1   VOUT   100k\nCL1  VOUT  0      0.40n\n.end",
+    "generation_time_s": 58.79,
+    "tokens_generated": 2208,
+    "final_spec_met": false,
+    "iterations_used": 5
+  }
+]

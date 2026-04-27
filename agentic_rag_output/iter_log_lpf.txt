@@ -1,0 +1,1199 @@
+RAG PIPELINE — LPF — 2026-04-26T02:29:24.356827
+max_iters=5  entries=248
+======================================================================
+
+Entry 0  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.8%
+
+Entry 1  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=100415.1%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 2  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.2%
+
+Entry 3  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=917.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 4  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 5  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.6%
+
+Entry 6  low_pass/rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=97996.7%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=9709.6%
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=458.9%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=458.9%
+
+Entry 7  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 8  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 9  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.5%
+
+Entry 10  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9887.6%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 11  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=897.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 12  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 13  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 14  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.8%
+
+Entry 15  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.1%
+
+Entry 16  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.0%
+
+Entry 17  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=898.5%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 18  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 19  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.8%
+
+Entry 20  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 21  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.3%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 22  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 23  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 24  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.7%
+
+Entry 25  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.4%
+
+Entry 26  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.5%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=3.5%
+
+Entry 27  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=888.6%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 28  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.2%
+
+Entry 29  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=883.8%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 30  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 31  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 32  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=99911.5%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 33  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 34  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.1%
+
+Entry 35  low_pass/rc_single  spec=✗
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✗  sim=✗  spec=✗
+  iter 3: parse=✗  sim=✗  spec=✗
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 36  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 37  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=892.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 38  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.4%
+
+Entry 39  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.9%
+
+Entry 40  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=894.7%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 41  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.7%
+
+Entry 42  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.8%
+
+Entry 43  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 3: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 44  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 45  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.1%
+
+Entry 46  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=6.7%
+
+Entry 47  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=99207.5%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 48  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.5%
+
+Entry 49  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.1%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 50  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9788.6%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 51  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 52  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 53  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.3%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 54  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=3.5%
+
+Entry 55  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=3.7%
+
+Entry 56  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.3%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=9874.9%
+  iter 3: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 57  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.5%
+
+Entry 58  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.9%
+
+Entry 59  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.4%
+
+Entry 60  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.7%
+
+Entry 61  low_pass/rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.7%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 62  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=884.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.3%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 63  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=52.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+
+Entry 64  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=24.3%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 65  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=51046.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=19283.7%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=19283.7%
+
+Entry 66  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=906.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.2%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=273.2%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+
+Entry 67  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 68  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=924.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=924.4%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=3633.6%
+
+Entry 69  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 70  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=50168.6%
+  iter 2: parse=✗  sim=✗  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=8897.9%
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=8897.9%
+
+Entry 71  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=218.2%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 3: parse=✓  sim=✓  spec=✓  fc_err=18.2%
+
+Entry 72  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.0%
+
+Entry 73  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=68.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+
+Entry 74  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9954.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=37237.5%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=37237.5%
+  iter 4: parse=✓  sim=✓  spec=✗
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=99665.8%
+
+Entry 75  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=0.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=0.4%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=0.4%
+
+Entry 76  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=914.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 77  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=273.3%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 78  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=706.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+
+Entry 79  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+
+Entry 80  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.1%
+
+Entry 81  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=47.3%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=47.3%
+
+Entry 82  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=80.3%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+
+Entry 83  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9940.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 84  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=877.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=272.8%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+
+Entry 85  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=944.2%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 86  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=74.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 87  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=16.3%
+
+Entry 88  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=4.8%
+
+Entry 89  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+
+Entry 90  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=4.6%
+
+Entry 91  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=10369.1%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=3639.0%
+  iter 3: parse=✓  sim=✓  spec=✓  fc_err=0.0%
+
+Entry 92  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9695.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 93  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=888.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 94  low_pass/rc_multi  spec=✗
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=96.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.3%
+
+Entry 95  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=10031.3%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=273.3%
+  iter 3: parse=✓  sim=✓  spec=✗
+  iter 4: parse=✓  sim=✓  spec=✓  fc_err=18.2%
+
+Entry 96  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9861.2%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 97  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=717.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 3: parse=✓  sim=✓  spec=✓  fc_err=18.2%
+
+Entry 98  low_pass/rc_multi  spec=✗
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✗  sim=✗  spec=✗
+  iter 3: parse=✗  sim=✗  spec=✗
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 99  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.1%
+
+Entry 100  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=905.3%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 101  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.2%
+
+Entry 102  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=68.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+
+Entry 103  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.7%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=89.7%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=89.7%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=89.7%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=89.7%
+
+Entry 104  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.5%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 105  low_pass/rc_multi  spec=✗
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=222.8%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+
+Entry 106  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.7%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+
+Entry 107  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=927.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 108  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=87.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+
+Entry 109  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=115.7%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=20.5%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=22.9%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=30.5%
+
+Entry 110  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=49.0%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=49.0%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=49.0%
+
+Entry 111  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=908.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 112  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=47.2%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=78.3%
+
+Entry 113  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 114  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.8%
+
+Entry 115  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 116  low_pass/rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.8%
+
+Entry 117  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=95.5%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=95.5%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=95.5%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=95.5%
+
+Entry 118  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=68.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+
+Entry 119  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98019.0%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 120  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.3%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=98.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=273.2%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=96.0%
+
+Entry 121  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=89.8%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=96.0%
+
+Entry 122  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=10347.0%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.9%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=64.1%
+
+Entry 123  low_pass/rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.1%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=96.0%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=96.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=90.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 124  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.5%
+
+Entry 125  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 126  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.4%
+
+Entry 127  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9566.9%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 128  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.9%
+
+Entry 129  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=901.1%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 130  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 131  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 132  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=61.7%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 133  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 134  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=878.1%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 135  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=4.1%
+
+Entry 136  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 137  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.6%
+
+Entry 138  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.0%
+
+Entry 139  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.2%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 140  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.0%
+
+Entry 141  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.3%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 4: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 142  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=891.9%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 143  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=98.6%
+  iter 3: parse=✓  sim=✓  spec=✓  fc_err=0.8%
+
+Entry 144  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.9%
+
+Entry 145  low_pass/buffered_rc_single  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.2%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+
+Entry 146  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=892.3%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 147  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 148  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 149  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=1.2%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=18.3%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=1.2%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=18.3%
+  iter 5: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 150  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=3.6%
+
+Entry 151  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.2%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 152  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=860.4%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 153  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.6%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 154  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=1457.2%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 155  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.8%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 156  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.6%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 157  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 158  low_pass/buffered_rc_single  spec=✗
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✗  sim=✗  spec=✗
+  iter 3: parse=✗  sim=✗  spec=✗
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 159  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.6%
+
+Entry 160  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.4%
+
+Entry 161  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✓  sim=✗  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=9312.8%
+  iter 4: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 162  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9816.2%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 163  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 164  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9744.7%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 165  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.3%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 166  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.1%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 167  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=3.7%
+
+Entry 168  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 169  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 3: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 170  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 171  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.4%
+
+Entry 172  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 173  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.6%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 174  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=877.5%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 175  low_pass/buffered_rc_single  spec=✗
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✗  sim=✗  spec=✗
+  iter 3: parse=✗  sim=✗  spec=✗
+  iter 4: parse=✗  sim=✗  spec=✗
+  iter 5: parse=✗  sim=✗  spec=✗
+
+Entry 176  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 177  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.1%
+
+Entry 178  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.8%
+
+Entry 179  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=891.4%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 180  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.6%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 181  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 182  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.7%
+
+Entry 183  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.8%
+
+Entry 184  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.4%
+
+Entry 185  low_pass/buffered_rc_single  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.9%
+
+Entry 186  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=895.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=273.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+
+Entry 187  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.0%
+
+Entry 188  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+
+Entry 189  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=9898.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=96.0%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=96.0%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=96.0%
+
+Entry 190  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.6%
+
+Entry 191  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=97.5%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+
+Entry 192  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=85.3%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=85.3%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=85.3%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=85.3%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=85.3%
+
+Entry 193  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=2459.1%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 194  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=0.8%
+
+Entry 195  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=4.4%
+
+Entry 196  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.8%
+
+Entry 197  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=10139.2%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=3633.3%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=273.3%
+
+Entry 198  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=905.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=49.4%
+  iter 4: parse=✓  sim=✓  spec=✓  fc_err=4.5%
+
+Entry 199  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=3.5%
+
+Entry 200  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 201  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=901.1%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=165.5%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=165.5%
+
+Entry 202  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.0%
+
+Entry 203  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.2%
+
+Entry 204  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=94084.7%
+  iter 2: parse=✓  sim=✓  spec=✗
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=25218.4%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=8451.4%
+
+Entry 205  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=10152.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.0%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=268.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=248.2%
+
+Entry 206  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 207  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=898.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.8%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+
+Entry 208  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.1%
+
+Entry 209  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=96.4%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=96.4%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=96.4%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=96.4%
+
+Entry 210  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.4%
+
+Entry 211  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=48.0%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+
+Entry 212  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=3.5%
+
+Entry 213  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=10177.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 214  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=68.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=11720.9%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=11720.9%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=434.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=37235.5%
+
+Entry 215  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.0%
+
+Entry 216  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.5%
+
+Entry 217  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=876.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+
+Entry 218  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=5.4%
+
+Entry 219  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✗  sim=✗  spec=✗
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=86.4%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=86.4%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+
+Entry 220  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=37547.5%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=37547.5%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=37547.5%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=37547.5%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=37547.5%
+
+Entry 221  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=59.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=94.1%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=59.9%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=94.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=94.1%
+
+Entry 222  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=10176.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=3633.2%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=3633.2%
+
+Entry 223  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=914.5%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=914.5%
+  iter 4: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 224  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=941.0%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✓  fc_err=12.5%
+
+Entry 225  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=925.2%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 226  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=893.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=893.8%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=893.8%
+
+Entry 227  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=7905.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=7905.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=91.9%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=37507.8%
+
+Entry 228  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.3%
+
+Entry 229  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=5099.0%
+  iter 2: parse=✓  sim=✓  spec=✓  fc_err=1.9%
+
+Entry 230  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=69.4%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+
+Entry 231  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 232  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=92.0%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=7808.7%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=92.0%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=7808.7%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=92.0%
+
+Entry 233  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=98.3%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 234  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=62.0%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+
+Entry 235  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=1.1%
+
+Entry 236  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=215.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+
+Entry 237  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=90.2%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.7%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 238  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.8%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 239  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 240  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=918.1%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=3634.0%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=273.4%
+
+Entry 241  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=919.7%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=273.3%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+
+Entry 242  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.1%
+
+Entry 243  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=89.9%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=96.0%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=273.3%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=62.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=96.0%
+
+Entry 244  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=2.1%
+
+Entry 245  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=80.6%
+
+Entry 246  low_pass/buffered_rc_multi  spec=✓
+  iter 1: parse=✓  sim=✓  spec=✓  fc_err=0.0%
+
+Entry 247  low_pass/buffered_rc_multi  spec=✗
+  iter 1: parse=✓  sim=✓  spec=✗  fc_err=88.0%
+  iter 2: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 3: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+  iter 4: parse=✓  sim=✓  spec=✗  fc_err=881.2%
+  iter 5: parse=✓  sim=✓  spec=✗  fc_err=88.1%
+
