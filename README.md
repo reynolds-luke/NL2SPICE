@@ -74,13 +74,17 @@ NL2SPICE/
 │   └── filter_chat.py      # Interactive terminal chat interface
 │
 ├── results/
-│   ├── plot_results.py     # Generate report figures from evaluation output
-│   └── figures/            # Pre-generated result figures (5 PNG files)
+│   ├── plot_results.py     # Generate main report figures from evaluation output
+│   ├── plot_appendix.py    # Generate appendix figures (convergence, failure modes, Bode)
+│   └── figures/            # Pre-generated result figures (8 PNG files)
 │       ├── fig1_overall_spec_met.png
 │       ├── fig2_topology_heatmap.png
 │       ├── fig3_iteration_distribution.png
 │       ├── fig4_per_topology_bars.png
-│       └── fig5_baseline_comparison.png
+│       ├── fig5_baseline_comparison.png
+│       ├── fig_a1_cumulative_convergence.png
+│       ├── fig_a2_failure_modes.png
+│       └── fig_a3_bode_before_after.png
 │
 ├── New_Datagen/            # Dataset generation scripts and 1000-entry prompt datasets
 │   ├── gen_*.py            # Per-filter generator scripts
