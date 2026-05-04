@@ -101,7 +101,8 @@ NL2SPICE/
 ├── archive/                # Earlier pipeline versions and baseline outputs
 │
 ├── requirements.txt
-└── README.md
+├── README.md
+└── LukeChats.txt
 ```
 
 ---
