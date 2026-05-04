@@ -102,7 +102,7 @@ NL2SPICE/
 │
 ├── requirements.txt
 ├── README.md
-└── LukeChats.txt
+└── LukeChats.txt           # Full list of prompts Luke used for his portions of the pipeline
 ```
 
 ---
